@@ -1,4 +1,20 @@
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import ExploreCarousel from '../components/ExploreCarousel';
+
+// --- Animation Blueprints ---
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15 }
+  }
+};
 
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState({ days: '00', hours: '00', minutes: '00', seconds: '00' });
@@ -21,27 +37,42 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <div className="hero-badge">From Signals to Smart Systems</div>
-        <h1>IEEE <span>SPeCS</span> 2027</h1>
-        <p className="hero-sub">2027 IEEE International Conference on Signal, Power &amp; Computing Systems</p>
-        <p className="hero-conf">Organized by the Department of Electrical Engineering, National Institute of Technology Silchar.</p>
-        
-        <div className="hero-meta">
-          <div className="hero-meta-item"><span className="icon">📅</span><div><strong>25–27 May, 2027</strong><span>Conference Dates</span></div></div>
-          <div className="hero-meta-item"><span className="icon">📍</span><div><strong>NIT Silchar, India</strong><span>Venue</span></div></div>
-          <div className="hero-meta-item"><span className="icon">🌐</span><div><strong>Hybrid Mode</strong><span>In-person &amp; Virtual</span></div></div>
-        </div>
+        {/* We wrap the inner hero content in a motion.div to orchestrate the stagger */}
+        <motion.div 
+          className="hero-content-wrapper"
+          variants={staggerContainer}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div variants={fadeInUp} className="hero-badge">From Signals to Smart Systems</motion.div>
+          <motion.h1 variants={fadeInUp}>IEEE <span>SPeCS</span> 2027</motion.h1>
+          <motion.p variants={fadeInUp} className="hero-sub">2027 IEEE International Conference on Signal, Power &amp; Computing Systems</motion.p>
+          <motion.p variants={fadeInUp} className="hero-conf">Organized by the Department of Electrical Engineering, National Institute of Technology Silchar.</motion.p>
+          
+          <motion.div variants={fadeInUp} className="hero-meta">
+            <div className="hero-meta-item"><span className="icon">📅</span><div><strong>25–27 May, 2027</strong><span>Conference Dates</span></div></div>
+            <div className="hero-meta-item"><span className="icon">📍</span><div><strong>NIT Silchar, India</strong><span>Venue</span></div></div>
+            <div className="hero-meta-item"><span className="icon">🌐</span><div><strong>Hybrid Mode</strong><span>In-person &amp; Virtual</span></div></div>
+          </motion.div>
 
-        <div className="hero-logos">
-          <img src="/ieeelogo.png" alt="IEEE" style={{ height: '70px' }} />
-          <span style={{ opacity: 0.3, margin: '0 15px' }}>|</span>
-          <img src="/specs.jpeg" alt="IEEE Signal Processing" style={{ height: '70px' }} />
-          <span style={{ opacity: 0.3, margin: '0 15px' }}>|</span>
-          <img src="/nitslogo.png" alt="NIT Silchar" style={{ height: '70px' }} />
-        </div>
+          <motion.div variants={fadeInUp} className="hero-logos">
+            <img src="/ieeelogo.png" alt="IEEE" style={{ height: '70px' }} />
+            <span style={{ opacity: 0.3, margin: '0 15px' }}>|</span>
+            <img src="/specs.jpeg" alt="IEEE Signal Processing" style={{ height: '70px' }} />
+            <span style={{ opacity: 0.3, margin: '0 15px' }}>|</span>
+            <img src="/nitslogo.png" alt="NIT Silchar" style={{ height: '70px' }} />
+          </motion.div>
+        </motion.div>
       </section>
 
-      <div className="countdown-bar">
+      {/* Animate the countdown bar sliding up */}
+      <motion.div 
+        className="countdown-bar"
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+      >
         <div className="countdown-inner">
           <p className="countdown-label"> Paper Submission Closes In</p>
           <div className="countdown-units">
@@ -51,9 +82,16 @@ export default function Home() {
             <div className="countdown-unit"><span className="num">{timeLeft.seconds}</span><span className="lbl">Secs</span></div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <section className="section">
+      {/* Animate the About section as the user scrolls to it */}
+      <motion.section 
+        className="section"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="section-inner">
           <div className="about-grid">
             <div className="about-text">
@@ -67,12 +105,13 @@ export default function Home() {
               </div>
             </div>
             <div className="about-stats">
-              <div className="stat-card"><span className="num">600</span><p className="lbl">Acre Green Campus</p></div>
-              <div className="stat-card"><span className="num">4</span><p className="lbl">IEEE Co-sponsors</p></div>
+              <motion.div whileHover={{ scale: 1.05 }} className="stat-card"><span className="num">600</span><p className="lbl">Acre Green Campus</p></motion.div>
+              <motion.div whileHover={{ scale: 1.05 }} className="stat-card"><span className="num">4</span><p className="lbl">IEEE Co-sponsors</p></motion.div>
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
+      <ExploreCarousel />
     </>
   );
 }
