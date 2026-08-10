@@ -12,14 +12,19 @@ const committeeData = [
         affiliation: "NIT Silchar",
         image: null // Replace with image URL later
       },
-      { 
+      
+    ]
+  },
+  {
+    category: "Patrons",
+    members: [
+     { 
         name: "Prof. Debangshu Dey", 
         role: "Chair", 
         affiliation: "IEEE Kolkata Section",
         image: null
-      }
-    ]
-  },
+      },]
+    },
   {
     category: "General Chairs",
     members: [

@@ -10,7 +10,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-4 whitespace-nowrap">
             <span className="text-blue-400 font-extrabold">📢 UPDATES:</span>
-            <span>INITIAL DIGEST DEADLINE: AUGUST 1, 2026</span>
+            <span>INITIAL DIGEST DEADLINE: SEPTEMBER 1, 2026</span>
             <span className="text-slate-600">|</span>
             <span>VENUE: NIT SILCHAR (HYBRID MODE)</span>
           </div>
@@ -62,9 +62,15 @@ export default function Navbar() {
           <div className="flex flex-wrap -mb-px">
             {[
               { label: "Home", path: "/" },
-              { label: "Call for Papers", path: "/call-for-papers" },
-              { label: "Registration Fees", path: "/registration" },
               { label: "Organizing Committee", path: "/committee" },
+              { label: "Registration", path: "/registration" },
+              { label: "Speakers", path: "/speakers" },
+              { label: "Program", path: "/schedule" },
+              { label: "Call for Papers", path: "/call-for-papers" },
+              { label: "Sponsors", path: "/sponsors" },
+              { label: "Accomodation", path: "/accomodation" },
+              
+             
               { label: "Contact Desk", path: "/contact" }
             ].map((link) => (
               <NavLink

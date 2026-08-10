@@ -18,7 +18,7 @@ const cardVariants = {
 
 export default function Papers() {
   const milestones = [
-    { icon: <Calendar className="w-6 h-6 text-orange-500" />, event: "Call for Paper", date: "August 1", year: "2026" },
+    { icon: <Calendar className="w-6 h-6 text-orange-500" />, event: "Call for Paper", date: "September 1", year: "2026" },
     { icon: <Inbox className="w-6 h-6 text-blue-500" />, event: "Submission Deadline", date: "Dec 15", year: "2026" },
     { icon: <Camera className="w-6 h-6 text-emerald-500" />, event: "Camera Ready", date: "Jan 31", year: "2027" },
   ];

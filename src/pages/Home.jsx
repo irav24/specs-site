@@ -7,7 +7,7 @@ export default function Home() {
   const [timeLeft, setTimeLeft] = useState({ days: '00', hours: '00', minutes: '00', seconds: '00' });
 
   useEffect(() => {
-    const deadline = new Date('2026-08-01T00:00:00');
+    const deadline = new Date('2026-09-01T00:00:00');
     const timer = setInterval(() => {
       const diff = deadline - new Date();
       if(diff <= 0) return;
@@ -44,7 +44,7 @@ export default function Home() {
               {/* Core Targets Matrix */}
               <div className="flex flex-wrap gap-3 pt-2">
                 <a href="https://cmt3.research.microsoft.com" target="_blank" rel="noreferrer" className="px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold uppercase tracking-wider rounded-md transition-all flex items-center gap-2">
-                  Submit via Microsoft CMT <ExternalLink className="w-3.5 h-3.5" />
+                  Submit Paper <ExternalLink className="w-3.5 h-3.5" />
                 </a>
                 <button className="px-5 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold uppercase tracking-wider rounded-md transition-all border border-slate-700">
                   Registration Portal
