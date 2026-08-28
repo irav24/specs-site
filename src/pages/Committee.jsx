@@ -1,131 +1,110 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { User, Building2 } from 'lucide-react';
 
 const committeeData = [
   {
-    category: "Chief Patron & Patrons",
-    members: [
+    category: "Steering Committee",
+    headerColor: "bg-[#0057b2]", // Deep Blue
+    roles: [
       { 
-        name: "Prof. Dilip Kumar Baidya", 
-        role: "Director", 
-        affiliation: "NIT Silchar",
-        image: null // Replace with image URL later
-      },
-      
+        title: null, 
+        members: [
+          "Prof. Subhas C. Mukhopadhyay, Macquarie University, Australia",
+          "Prof. Santu Rana, Deakin University, Australia",
+          "Prof. Saugat Bhattacharya, Ulster University, United Kingdom",
+          "Prof. K V S Hari, IISc Bangalore, India",
+          "Prof. Prabir Kumar Biswas, IIT Kharagpur, India",
+          "Prof. Anindya Nag, Dresden, Germany",
+          "Prof. N P Padhy, Director, MNIT Jaipur, India",
+          "Prof. Amit Konar, Jadavpur University"
+        ]
+      }
     ]
   },
   {
-    category: "Patrons",
-    members: [
-     { 
-        name: "Prof. Debangshu Dey", 
-        role: "Chair", 
-        affiliation: "IEEE Kolkata Section",
-        image: null
-      },]
-    },
-  {
-    category: "General Chairs",
-    members: [
-      { 
-        name: "Dr. Tanmoy Malakar", 
-        role: "Department of EE", 
-        affiliation: "NIT Silchar",
-        image: null
+    category: "Organising Committee",
+    headerColor: "bg-[#7ed957]", // Lime Green
+    roles: [
+      {
+        title: "Chief Patron",
+        members: ["Prof. Dilip Kumar Baidya, Director, NIT Silchar"]
       },
-      { 
-        name: "Dr. Rajeeb Dey", 
-        role: "Department of EE", 
-        affiliation: "NIT Silchar",
-        image: null
+      {
+        title: "Patrons",
+        members: [
+          "Prof. Debangshu Dey, Chair, IEEE Kolkata Section",
+          "Dr. Asha Rani M A, Chair, IEEE Silchar Subsection"
+        ]
+      },
+      {
+        title: "General Chairs",
+        members: [
+          "Dr. Tanmoy Malakar, NIT Silchar",
+          "Dr. Rajeeb Dey, NIT Silchar",
+          "Prof. Ram Bilash Pachori, IIT Indore"
+        ]
+      },
+      {
+        title: "Technical Program Chairs",
+        members: [
+          "Prof. N B Dev Choudhury, NIT Silchar",
+          "Prof. Arup Kumar Goswami, NIT Silchar",
+          "Prof. Sovan Dalai, Jadavpur University"
+        ]
       }
     ]
   }
 ];
 
-// Animation Blueprints
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1 }
-  }
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
-};
-
 export default function Committee() {
   return (
-    <div className="bg-slate-50 min-h-screen py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-white min-h-screen py-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header Section */}
-        <div className="mb-16 text-center">
-          <div className="inline-block px-3 py-1 mb-4 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold tracking-wide uppercase">
-            Leadership
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900" style={{ fontFamily: "'Merriweather', serif" }}>
-            Steering & Organising <span className="text-indigo-600">Committee</span>
+        <div className="mb-10 text-center">
+          <h2 className="text-3xl md:text-4xl font-black text-[#0057b2] uppercase tracking-wide">
+            Conference <span className="text-[#7ed957]">Committee</span>
           </h2>
-          <p className="text-slate-600 max-w-2xl mx-auto mt-4">
-            Meet the academic leaders and technical experts driving the vision behind SPeCS 2027.
-          </p>
         </div>
 
-        {/* Committee Groups */}
-        <div className="space-y-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           {committeeData.map((group, groupIndex) => (
-            <div key={groupIndex}>
-              {/* Group Title */}
-              <h3 className="text-xl font-bold text-slate-800 border-b-2 border-slate-200 pb-3 mb-8">
-                {group.category}
-              </h3>
-
-              {/* Members Grid */}
-              <motion.div 
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-50px" }}
-              >
-                {group.members.map((member, memberIndex) => (
-                  <motion.div 
-                    key={memberIndex}
-                    variants={cardVariants}
-                    className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-lg hover:border-indigo-100 transition-all group flex flex-col items-center text-center"
-                  >
-                    {/* Avatar / Placeholder */}
-                    <div className="w-24 h-24 rounded-full mb-5 overflow-hidden bg-slate-100 border-4 border-white shadow-sm flex items-center justify-center relative">
-                      {member.image ? (
-                        <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-                      ) : (
-                        <User className="w-10 h-10 text-slate-300" />
-                      )}
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-indigo-600/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </div>
-
-                    {/* Member Details */}
-                    <h4 className="text-lg font-bold text-slate-900 mb-1 leading-snug">
-                      {member.name}
-                    </h4>
-                    <p className="text-sm font-medium text-indigo-600 mb-3">
-                      {member.role}
-                    </p>
-                    
-                    <div className="flex items-center justify-center gap-1.5 text-xs font-semibold text-slate-500 bg-slate-50 px-3 py-1.5 rounded-lg w-full">
-                      <Building2 className="w-3.5 h-3.5" />
-                      {member.affiliation}
-                    </div>
-                  </motion.div>
+            <motion.div 
+              key={groupIndex}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: groupIndex * 0.1 }}
+              className="flex flex-col border border-slate-200 shadow-sm"
+            >
+              {/* Solid Color Block Header from Flyer */}
+              <div className={`${group.headerColor} py-2 px-4 text-center`}>
+                <h3 className="text-white font-bold text-lg tracking-wider uppercase">
+                  {group.category}
+                </h3>
+              </div>
+              
+              {/* Dense List Layout */}
+              <div className="p-5 bg-white">
+                {group.roles.map((roleGroup, roleIdx) => (
+                  <div key={roleIdx} className="mb-4 last:mb-0">
+                    {roleGroup.title && (
+                      <h4 className="text-[#0057b2] font-bold text-sm mb-1.5">
+                        {roleGroup.title}
+                      </h4>
+                    )}
+                    <ul className="space-y-1.5">
+                      {roleGroup.members.map((member, memberIdx) => (
+                        <li key={memberIdx} className="text-slate-800 text-sm flex items-start">
+                          <span className="text-slate-400 mr-2 mt-0.5">•</span>
+                          <span className="font-medium">{member}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
           ))}
         </div>
 

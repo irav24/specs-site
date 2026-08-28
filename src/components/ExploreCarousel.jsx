@@ -33,14 +33,13 @@ const destinations = [
 ];
 
 export default function ExploreCarousel() {
-  // 2. Inject the WheelGesturesPlugin into the Embla hook
   const [emblaRef] = useEmblaCarousel(
     { dragFree: true, containScroll: 'trimSnaps' },
-    [WheelGesturesPlugin()] 
+    [WheelGesturesPlugin()]
   );
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -49,41 +48,34 @@ export default function ExploreCarousel() {
           className="flex flex-col gap-5"
         >
           <div>
-            <div className="inline-block px-3 py-1 mb-5 rounded-full border border-slate-800 text-slate-900 text-xs font-medium tracking-wide uppercase">
+            {/* Styled with IEEE Blue & Lime */}
+            <div className="inline-block px-3 py-1 mb-5 rounded-full bg-[#0057b2]/5 border border-[#0057b2]/20 text-[#0057b2] text-xs font-black tracking-widest uppercase">
               Discover the Valley
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: "'Merriweather', serif", color: "var(--navy)" }}>
-              Explore Silchar
+            <h2 className="text-3xl md:text-4xl font-black mb-4 text-slate-900">
+              Explore <span className="text-[#0057b2]">Silchar</span>
             </h2>
-            <p className="text-slate-700 text-[15px] md:text-base max-w-2xl">
+            <p className="text-slate-600 text-[15px] md:text-base max-w-2xl font-medium">
               Swipe to discover the vibrant culture, historic landmarks, and beautiful campus awaiting you at SPeCS 2027.
             </p>
           </div>
         </motion.div>
       </div>
 
-      {/* 3. FIX: Added 'overflow-hidden' right here so the drag physics calculate correctly */}
       <div className="embla w-full overflow-hidden pl-4 sm:pl-6 lg:pl-8 pb-8 pt-2" ref={emblaRef}>
         <div className="embla__container flex cursor-grab active:cursor-grabbing">
           {destinations.map((dest, index) => (
-            <div 
-              key={index} 
-              className="embla__slide flex-[0_0_85%] sm:flex-[0_0_45%] md:flex-[0_0_30%] min-w-0 pl-4 relative group"
-            >
-              <div className="relative h-[340px] w-full rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-                <img 
-                  src={dest.image} 
-                  alt={dest.title} 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent" />
+            <div key={index} className="embla__slide flex-[0_0_85%] sm:flex-[0_0_45%] md:flex-[0_0_30%] min-w-0 pl-4 relative group">
+              <div className="relative h-[340px] w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+                <img src={dest.image} alt={dest.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#002b5e] via-[#0057b2]/40 to-transparent" />
                 
                 <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                    <MapPin className="w-5 h-5 text-blue-400" />
+                  <h3 className="text-xl font-black text-white mb-2 flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-[#7ed957]" />
                     {dest.title}
                   </h3>
-                  <p className="text-sm text-slate-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                  <p className="text-sm text-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 font-medium">
                     {dest.desc}
                   </p>
                 </div>

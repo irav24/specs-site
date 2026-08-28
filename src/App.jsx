@@ -17,10 +17,16 @@ const ScrollToTop = () => {
   return null;
 };
 
-// Safe fallback for pages we haven't built yet
+// Safe fallback for new pages we haven't built yet
 const Placeholder = ({ title }) => (
   <div className="min-h-[60vh] flex items-center justify-center bg-slate-50">
-    <h2 className="text-2xl font-bold text-slate-800">{title} - Coming Soon</h2>
+    <div className="text-center">
+      <div className="inline-block px-3 py-1 mb-4 rounded-full bg-blue-100 text-blue-700 text-xs font-bold tracking-wide uppercase">
+        Under Construction
+      </div>
+      <h2 className="text-3xl font-bold text-slate-800">{title}</h2>
+      <p className="text-slate-500 mt-2">This section will be updated soon.</p>
+    </div>
   </div>
 );
 
@@ -36,9 +42,10 @@ export default function App() {
           <Route path="committee" element={<Committee />} />
           <Route path="contact" element={<Contact />} />
           
-          {/* Dropdown Link Routes */}
-          <Route path="speakers" element={<Placeholder title="Speakers" />} />
-          <Route path="schedule" element={<Placeholder title="Program" />} />
+          {/* New Dropdown Link Routes */}
+          <Route path="authors" element={<Placeholder title="Authors Information" />} />
+          <Route path="program" element={<Placeholder title="Conference Program" />} />
+          <Route path="speakers" element={<Placeholder title="Keynote Speakers" />} />
           <Route path="sponsors" element={<Placeholder title="Sponsors" />} />
           <Route path="accommodation" element={<Placeholder title="Accommodation" />} />
           
