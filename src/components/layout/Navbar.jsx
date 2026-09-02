@@ -8,8 +8,12 @@ export default function Navbar() {
   const navLinks = [
     { label: "Home", path: "/" },
     {
-      label: "Committee", path: "/committee",
-      children: [{ label: "Steering Committee", path: "/committee#steering" }, { label: "Organising Committee", path: "/committee#organising" }, { label: "Advisory Committee", path: "/committee#advisory" }]
+      label: "Committee", path: "/committee/organising", // default click goes somewhere safe
+      children: [
+        { label: "Steering Committee", path: "/committee/steering" },
+        { label: "Organising Committee", path: "/committee/organising" },
+        { label: "Advisory Committee", path: "/committee/advisory" }
+      ]
     },
     {
       label: "Authors", path: "/authors",

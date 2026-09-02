@@ -5,7 +5,9 @@ import MainLayout from "./components/layout/MainLayout";
 import Home from "./pages/Home";
 import Papers from "./pages/Papers";
 import Registration from "./pages/Registration";
-import Committee from "./pages/Committee";
+import Organising from './pages/committee/Organising';
+import Steering from './pages/committee/Steering';
+import Advisory from './pages/committee/Advisory';
 import Contact from "./pages/Contact";
 
 // Helper to scroll to top on route change
@@ -39,7 +41,10 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="call-for-papers" element={<Papers />} />
           <Route path="registration" element={<Registration />} />
-          <Route path="committee" element={<Committee />} />
+          
+          <Route path="/committee/organising" element={<Organising />} />
+<Route path="/committee/steering" element={<Steering />} />
+<Route path="/committee/advisory" element={<Advisory />} />
           <Route path="contact" element={<Contact />} />
           
           {/* New Dropdown Link Routes */}
