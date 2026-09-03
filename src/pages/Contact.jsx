@@ -1,118 +1,75 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Globe } from 'lucide-react';
+import { Mail, Phone, Globe, MapPin } from 'lucide-react';
 
 export default function Contact() {
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    alert("Form submission logic coming soon!");
-  };
-
   return (
-    <div className="bg-slate-50 min-h-screen py-12">
+    <div className="bg-slate-50 min-h-screen py-16 md:py-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Main Content Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        {/* Unified Page Header */}
+        <div className="text-center mb-16">
+          <h1 className="font-serif text-4xl md:text-5xl font-extrabold text-[#0057b2] mb-5 tracking-tight">
+            Contact Us
+          </h1>
+          <div className="w-24 h-1.5 bg-[#7ed957] mx-auto rounded-full mb-6"></div>
+          <p className="text-slate-600 text-lg font-medium max-w-2xl mx-auto leading-relaxed">
+            For any queries regarding paper submission, registration, or logistics, please reach out to our official desk.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           
-          {/* Left Column: Contact Information (Flyer Style) */}
-          <motion.div 
-            className="border border-slate-200 bg-white shadow-sm"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-          >
-            {/* Flyer Solid Green Block Header */}
-            <div className="bg-[#7ed957] py-2 px-4 text-center">
-              <h3 className="text-white font-bold text-lg tracking-wider uppercase">
-                Contact
-              </h3>
+          <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-5 hover:border-[#0057b2]/30 transition-colors">
+            <div className="p-4 bg-slate-50 rounded-full text-[#0057b2]">
+              <Mail className="w-8 h-8" />
             </div>
-            
-            <div className="p-6 space-y-6">
-              <div className="flex items-center gap-4">
-                <Globe className="w-6 h-6 text-[#0057b2]" />
-                <a href="https://specs.nits.ac.in" className="text-slate-800 font-bold hover:text-[#0057b2] transition-colors">
-                  specs.nits.ac.in
-                </a>
-              </div>
-              
-              <div className="flex items-center gap-4">
-                <Mail className="w-6 h-6 text-[#e4405f]" /> {/* Red mail icon accent from flyer */}
-                <a href="mailto:specs@nits.ac.in" className="text-slate-800 font-bold hover:text-[#0057b2] transition-colors">
-                  specs@nits.ac.in
-                </a>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <Phone className="w-6 h-6 text-[#25D366]" /> {/* WhatsApp green accent from flyer */}
-                <div>
-                  <p className="text-slate-800 font-bold">9476-355729 / 94321-25545</p>
-                  <p className="text-xs text-slate-500 mt-1">Student registration allowed for single paper.</p>
-                  <p className="text-xs text-slate-500">Academia registration for maximum of two papers.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 pt-4 border-t border-slate-100">
-                <MapPin className="w-6 h-6 text-[#0057b2]" />
-                <div>
-                  <p className="text-slate-800 font-bold">Department of Electrical Engineering</p>
-                  <p className="text-sm text-slate-600">National Institute of Technology Silchar</p>
-                  <p className="text-sm text-slate-600">Assam, India - 788010</p>
-                </div>
-              </div>
+            <div>
+              <h3 className="font-serif text-xl font-bold text-slate-900 mb-2">Email Address</h3>
+              <a href="mailto:specs@nits.ac.in" className="text-slate-600 font-medium hover:text-[#0057b2] transition-colors text-lg">
+                specs@nits.ac.in
+              </a>
             </div>
-          </motion.div>
+          </div>
 
-          {/* Right Column: Direct Message Form */}
-          <motion.div 
-            className="border border-slate-200 bg-white shadow-sm"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-          >
-            {/* Flyer Solid Blue Block Header */}
-            <div className="bg-[#0057b2] py-2 px-4 text-center">
-              <h3 className="text-white font-bold text-lg tracking-wider uppercase">
-                Send a Message
-              </h3>
+          <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-5 hover:border-[#0057b2]/30 transition-colors">
+            <div className="p-4 bg-slate-50 rounded-full text-[#0057b2]">
+              <Phone className="w-8 h-8" />
             </div>
+            <div>
+              <h3 className="font-serif text-xl font-bold text-slate-900 mb-2">Phone Lines</h3>
+              <p className="text-slate-600 font-mono font-medium text-lg">
+                +91 9476-355729
+                <br />
+                +91 94321-25545
+              </p>
+            </div>
+          </div>
 
-            <form onSubmit={handleFormSubmit} className="p-6 space-y-4">
-              <div>
-                <label className="block text-xs font-bold text-[#0057b2] uppercase tracking-wider mb-1">Full Name</label>
-                <input 
-                  type="text" 
-                  required
-                  className="w-full px-3 py-2 rounded-none border border-slate-300 text-slate-800 focus:outline-none focus:border-[#7ed957] focus:ring-1 focus:ring-[#7ed957] transition-all bg-slate-50"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-xs font-bold text-[#0057b2] uppercase tracking-wider mb-1">Email Address</label>
-                <input 
-                  type="email" 
-                  required
-                  className="w-full px-3 py-2 rounded-none border border-slate-300 text-slate-800 focus:outline-none focus:border-[#7ed957] focus:ring-1 focus:ring-[#7ed957] transition-all bg-slate-50"
-                />
-              </div>
+          <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-5 hover:border-[#0057b2]/30 transition-colors">
+            <div className="p-4 bg-slate-50 rounded-full text-[#0057b2]">
+              <Globe className="w-8 h-8" />
+            </div>
+            <div>
+              <h3 className="font-serif text-xl font-bold text-slate-900 mb-2">Official Website</h3>
+              <a href="https://specs.nits.ac.in" target="_blank" rel="noreferrer" className="text-slate-600 font-medium hover:text-[#0057b2] transition-colors text-lg">
+                specs.nits.ac.in
+              </a>
+            </div>
+          </div>
 
-              <div>
-                <label className="block text-xs font-bold text-[#0057b2] uppercase tracking-wider mb-1">Your Message</label>
-                <textarea 
-                  rows="4"
-                  required
-                  className="w-full px-3 py-2 rounded-none border border-slate-300 text-slate-800 focus:outline-none focus:border-[#7ed957] focus:ring-1 focus:ring-[#7ed957] transition-all bg-slate-50 resize-none"
-                ></textarea>
-              </div>
-
-              <button 
-                type="submit"
-                className="w-full px-6 py-3 bg-[#0057b2] hover:bg-[#004185] text-white font-bold tracking-wider uppercase transition-all flex items-center justify-center gap-2 mt-2"
-              >
-                <Send className="w-4 h-4 text-[#7ed957]" />
-                Submit
-              </button>
-            </form>
-          </motion.div>
+          <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-5 hover:border-[#0057b2]/30 transition-colors">
+            <div className="p-4 bg-slate-50 rounded-full text-[#0057b2]">
+              <MapPin className="w-8 h-8" />
+            </div>
+            <div>
+              <h3 className="font-serif text-xl font-bold text-slate-900 mb-2">Conference Venue</h3>
+              <p className="text-slate-600 font-medium text-lg leading-relaxed">
+                Department of Electrical Engineering,<br />
+                National Institute of Technology Silchar<br />
+                Assam, India - 788010
+              </p>
+            </div>
+          </div>
 
         </div>
 

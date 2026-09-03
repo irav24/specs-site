@@ -18,23 +18,30 @@ export default function Steering() {
   ];
 
   return (
-    <div className="bg-white min-h-screen py-16 md:py-24">
+    <div className="bg-slate-50 min-h-screen py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center mb-16 border-b border-slate-200 pb-10">
-          <h1 className="font-serif text-3xl md:text-5xl font-bold text-[#0057b2] mb-4">
+        {/* Unified Page Header */}
+        <div className="text-center mb-16">
+          <h1 className="font-serif text-4xl md:text-5xl font-extrabold text-[#0057b2] mb-5 tracking-tight">
             Steering Committee
           </h1>
+          <div className="w-24 h-1.5 bg-[#7ed957] mx-auto rounded-full mb-6"></div>
           <p className="text-slate-600 text-lg font-medium max-w-2xl mx-auto leading-relaxed">
-            The executive oversight board for IEEE SPeCS 2027.
+            The executive oversight board providing strategic direction for IEEE SPeCS 2027.
           </p>
         </div>
         
+        {/* Academic Card Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {steeringCommittee.map((member, idx) => (
-            <div key={idx} className="p-5 bg-slate-50 border border-slate-100 rounded-lg hover:border-[#0057b2]/30 hover:shadow-sm transition-all">
-              <p className="font-bold text-[#0057b2] text-[15px]">{member.name}</p>
-              <p className="text-sm text-slate-600 font-medium mt-1 leading-snug">{member.affiliation}</p>
+            <div key={idx} className="bg-white border-l-4 border-[#0057b2] hover:border-[#7ed957] p-6 rounded-r-xl shadow-sm hover:shadow-md transition-all group">
+              <h3 className="font-serif font-bold text-lg text-slate-900 group-hover:text-[#0057b2] transition-colors leading-snug">
+                {member.name}
+              </h3>
+              <p className="text-sm text-slate-600 font-medium mt-1.5">
+                {member.affiliation}
+              </p>
             </div>
           ))}
         </div>

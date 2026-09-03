@@ -27,29 +27,38 @@ export default function Advisory() {
   ];
 
   return (
-    <div className="bg-white min-h-screen py-16 md:py-24">
+    <div className="bg-slate-50 min-h-screen py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center mb-16 border-b border-slate-200 pb-10">
-          <h1 className="font-serif text-3xl md:text-5xl font-bold text-[#0057b2] mb-4">
+        {/* Unified Page Header */}
+        <div className="text-center mb-16">
+          <h1 className="font-serif text-4xl md:text-5xl font-extrabold text-[#0057b2] mb-5 tracking-tight">
             Advisory Committee
           </h1>
+          <div className="w-24 h-1.5 bg-[#7ed957] mx-auto rounded-full mb-6"></div>
           <p className="text-slate-600 text-lg font-medium max-w-2xl mx-auto leading-relaxed">
-            Distinguished experts providing strategic guidance and global perspective for SPeCS 2027.
+            Distinguished experts providing strategic guidance and a global perspective.
           </p>
         </div>
 
         {/* National Advisory Section */}
         <section className="mb-20">
-          <div className="flex items-center gap-4 mb-8">
-            <h2 className="font-serif text-2xl font-bold text-slate-900">National Advisory Board</h2>
-            <div className="flex-1 h-px bg-slate-200"></div>
+          <div className="flex items-center gap-6 mb-10">
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-slate-900 whitespace-nowrap">
+              National Advisory Board
+            </h2>
+            <div className="flex-1 h-px bg-slate-300"></div>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {nationalAdvisory.map((member, idx) => (
-              <div key={idx} className="p-4 bg-slate-50 border border-slate-100 rounded-lg hover:border-[#0057b2]/30 transition-colors">
-                <p className="font-bold text-[#0057b2] text-[15px]">{member.name}</p>
-                <p className="text-sm text-slate-600 font-medium mt-1">{member.affiliation}</p>
+              <div key={idx} className="bg-white border-l-4 border-[#0057b2] hover:border-[#7ed957] p-6 rounded-r-xl shadow-sm hover:shadow-md transition-all group">
+                <h3 className="font-serif font-bold text-lg text-slate-900 group-hover:text-[#0057b2] transition-colors leading-snug">
+                  {member.name}
+                </h3>
+                <p className="text-sm text-slate-600 font-medium mt-1.5">
+                  {member.affiliation}
+                </p>
               </div>
             ))}
           </div>
@@ -57,15 +66,22 @@ export default function Advisory() {
 
         {/* International Advisory Section */}
         <section>
-          <div className="flex items-center gap-4 mb-8">
-            <h2 className="font-serif text-2xl font-bold text-slate-900">International Advisory Board</h2>
-            <div className="flex-1 h-px bg-slate-200"></div>
+          <div className="flex items-center gap-6 mb-10">
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-slate-900 whitespace-nowrap">
+              International Advisory Board
+            </h2>
+            <div className="flex-1 h-px bg-slate-300"></div>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {internationalAdvisory.map((member, idx) => (
-              <div key={idx} className="p-5 bg-slate-50 border border-slate-100 rounded-lg hover:border-[#0057b2]/30 transition-colors">
-                <p className="font-bold text-[#0057b2] text-[15px]">{member.name}</p>
-                <p className="text-sm text-slate-600 font-medium mt-1 leading-snug">{member.affiliation}</p>
+              <div key={idx} className="bg-white border-l-4 border-[#0057b2] hover:border-[#7ed957] p-6 rounded-r-xl shadow-sm hover:shadow-md transition-all group">
+                <h3 className="font-serif font-bold text-lg text-slate-900 group-hover:text-[#0057b2] transition-colors leading-snug">
+                  {member.name}
+                </h3>
+                <p className="text-sm text-slate-600 font-medium mt-1.5 leading-relaxed">
+                  {member.affiliation}
+                </p>
               </div>
             ))}
           </div>

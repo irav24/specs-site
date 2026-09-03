@@ -115,47 +115,52 @@ export default function Organising() {
   ];
 
   return (
-    <div className="bg-white min-h-screen py-16 md:py-24">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-slate-50 min-h-screen py-16 md:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center mb-16 border-b border-slate-200 pb-10">
-          <h1 className="font-serif text-3xl md:text-5xl font-bold text-[#0057b2] mb-4">
+        {/* Unified Page Header */}
+        <div className="text-center mb-16">
+          <h1 className="font-serif text-4xl md:text-5xl font-extrabold text-[#0057b2] mb-5 tracking-tight">
             Organising Committee
           </h1>
+          <div className="w-24 h-1.5 bg-[#7ed957] mx-auto rounded-full mb-6"></div>
           <p className="text-slate-600 text-lg font-medium max-w-2xl mx-auto leading-relaxed">
             The leadership and operational body for the 2027 IEEE International Conference on Signal, Power & Computing Systems.
           </p>
         </div>
 
+        {/* Committee Sections */}
         <div className="space-y-24">
           {committeeData.map((group, index) => (
             <div key={index} className="text-center">
-              <h2 className="font-serif text-2xl font-bold text-[#0057b2] mb-10">
+              
+              <h2 className="inline-block font-serif text-2xl md:text-3xl font-bold text-slate-900 mb-10 border-b-2 border-slate-200 pb-2">
                 {group.role}
               </h2>
 
-              <div className="flex flex-wrap justify-center items-end gap-x-12 md:gap-x-16 gap-y-12">
+              <div className="flex flex-wrap justify-center items-stretch gap-8">
                 {group.members.map((member, memberIdx) => (
-                  <div key={memberIdx} className="flex flex-col items-center max-w-[280px]">
+                  <div key={memberIdx} className="flex flex-col items-center bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg hover:border-[#0057b2]/30 transition-all max-w-[280px] w-full group">
                     
-                    {/* Render Image or Placeholder */}
+                    {/* Image / Initial Placeholder */}
                     {member.image ? (
-                      <div className="w-36 h-36 rounded-full overflow-hidden mb-5 border border-slate-200 shadow-sm">
+                      <div className="w-32 h-32 rounded-full overflow-hidden mb-5 border-4 border-slate-50 shadow-inner group-hover:border-[#7ed957]/30 transition-colors">
                         <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                       </div>
                     ) : (
-                      <div className="w-28 h-28 rounded-xl bg-slate-50 border border-slate-200 shadow-sm mb-5 flex items-center justify-center">
-                         <span className="text-[#0057b2] font-serif font-bold text-2xl opacity-50">
+                      <div className="w-32 h-32 rounded-full bg-slate-100 border-4 border-slate-50 shadow-inner mb-5 flex items-center justify-center group-hover:bg-[#0057b2]/5 transition-colors">
+                         <span className="text-[#0057b2] font-serif font-bold text-4xl opacity-40">
                             {member.name.charAt(0)}
                          </span>
                       </div>
                     )}
 
-                    <div className="text-center">
-                      <p className="font-serif text-[17px] text-slate-900 font-bold leading-snug">
+                    {/* Member Details */}
+                    <div className="text-center mt-auto">
+                      <h3 className="font-serif text-lg text-[#0057b2] font-bold leading-snug mb-1">
                         {member.name}
-                      </p>
-                      <p className="text-sm text-slate-600 font-medium mt-1 leading-snug">
+                      </h3>
+                      <p className="text-sm text-slate-600 font-medium leading-snug">
                         {member.affiliation}
                       </p>
                     </div>

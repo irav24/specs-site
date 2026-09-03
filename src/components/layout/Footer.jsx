@@ -1,44 +1,47 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, ChevronRight } from 'lucide-react';
+import { Mail, Phone, MapPin, ChevronRight } from 'lucide-react';
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="w-full bg-[#002b5e] text-white border-t-4 border-[#7ed957]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+    <footer className="bg-slate-900 text-slate-300 border-t-4 border-[#0057b2] pt-16 pb-8 font-sans">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Top Section: Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           
-          {/* Column 1: Branding & About */}
-          <div className="space-y-4">
-            <h2 className="text-2xl font-black text-[#7ed957] tracking-tight">
-              IEEE SPeCS 2027
+          {/* Column 1: Brand & About */}
+          <div className="lg:col-span-1">
+            <h2 className="font-serif text-2xl font-bold text-white mb-4 tracking-tight">
+              IEEE SPeCS <span className="text-[#7ed957]">2027</span>
             </h2>
-            <p className="text-blue-100 text-sm leading-relaxed font-medium pr-4">
-              2027 IEEE International Conference on Signal, Power & Computing Systems. 
-              Organized by the Department of Electrical Engineering, National Institute of Technology Silchar.
+            <p className="text-sm leading-relaxed mb-6">
+              13th IEEE International Conference on Signal, Power & Computing Systems. Bridging foundational research with applied engineering paradigms.
             </p>
-            <div className="pt-2 flex items-center gap-4">
-              <img src="/ieeelogo.png" alt="IEEE Logo" className="h-10 object-contain bg-white p-1" />
-              <img src="/nitslogo.png" alt="NIT Silchar Logo" className="h-10 object-contain bg-white p-1" />
+            <div className="flex items-center gap-4">
+              <img src="/nitslogo.png" alt="NIT Silchar" className="h-12 w-auto " />
+              <img src="/ieeelogo.png" alt="IEEE" className="h-8 w-auto " />
             </div>
           </div>
 
           {/* Column 2: Quick Links */}
           <div>
-            <h3 className="text-lg font-bold text-white mb-4 uppercase tracking-wider border-b border-[#004185] pb-2">
+            <h3 className="font-serif text-lg font-bold text-white mb-5 border-b border-slate-700 pb-2">
               Quick Links
             </h3>
-            <ul className="space-y-2.5">
+            <ul className="space-y-3">
               {[
+                { name: "Home", path: "/" },
                 { name: "Call for Papers", path: "/call-for-papers" },
-                { name: "Paper Submission", path: "/authors#submission" },
+                { name: "Important Dates", path: "/authors#dates" },
                 { name: "Registration Fees", path: "/registration" },
-                { name: "Conference Program", path: "/program" },
-                { name: "Steering Committee", path: "/committee#steering" },
+                { name: "Organising Committee", path: "/committee/organising" }
               ].map((link, idx) => (
                 <li key={idx}>
-                  <Link to={link.path} className="text-blue-200 hover:text-[#7ed957] text-sm flex items-center transition-colors font-medium">
-                    <ChevronRight className="w-4 h-4 mr-1 text-[#7ed957]" />
+                  <Link to={link.path} className="text-sm hover:text-[#7ed957] transition-colors flex items-center gap-2 group">
+                    <ChevronRight className="w-3 h-3 text-[#0057b2] group-hover:text-[#7ed957] transition-colors" />
                     {link.name}
                   </Link>
                 </li>
@@ -46,46 +49,83 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Contact Info */}
+          {/* Column 3: Resources */}
           <div>
-            <h3 className="text-lg font-bold text-white mb-4 uppercase tracking-wider border-b border-[#004185] pb-2">
-              Contact Us
+            <h3 className="font-serif text-lg font-bold text-white mb-5 border-b border-slate-700 pb-2">
+              Resources
+            </h3>
+            <ul className="space-y-3">
+              {[
+                { name: "Paper Submission", path: "/authors#submission" },
+                { name: "IEEE Templates", url: "https://www.ieee.org" },
+                { name: "Accommodation", path: "/accommodation" },
+                { name: "Sponsorship Details", path: "/sponsors" },
+                { name: "Conference Program", path: "/program" }
+              ].map((link, idx) => (
+                <li key={idx}>
+                  {link.url ? (
+                    <a href={link.url} target="_blank" rel="noreferrer" className="text-sm hover:text-[#7ed957] transition-colors flex items-center gap-2 group">
+                      <ChevronRight className="w-3 h-3 text-[#0057b2] group-hover:text-[#7ed957] transition-colors" />
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link to={link.path} className="text-sm hover:text-[#7ed957] transition-colors flex items-center gap-2 group">
+                      <ChevronRight className="w-3 h-3 text-[#0057b2] group-hover:text-[#7ed957] transition-colors" />
+                      {link.name}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 4: Contact Secretariat */}
+          <div>
+            <h3 className="font-serif text-lg font-bold text-white mb-5 border-b border-slate-700 pb-2">
+              Contact Secretariat
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#7ed957] flex-shrink-0 mt-0.5" />
-                <div className="text-sm text-blue-100 font-medium leading-relaxed">
-                  Department of Electrical Engineering<br />
+                <MapPin className="w-5 h-5 text-[#0057b2] flex-shrink-0 mt-0.5" />
+                <span className="text-sm leading-relaxed">
+                  Department of Electrical Engineering,<br />
                   National Institute of Technology Silchar<br />
-                  Silchar, Assam, India - 788010
-                </div>
+                  Assam, India - 788010
+                </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[#7ed957] flex-shrink-0" />
-                <span className="text-sm text-blue-100 font-medium">9476-355729 / 94321-25545</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-[#7ed957] flex-shrink-0" />
-                <a href="mailto:specs@nits.ac.in" className="text-sm text-blue-100 hover:text-[#7ed957] transition-colors font-medium">
+                <Mail className="w-4 h-4 text-[#0057b2] flex-shrink-0" />
+                <a href="mailto:specs@nits.ac.in" className="text-sm hover:text-[#7ed957] transition-colors">
                   specs@nits.ac.in
                 </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <Phone className="w-4 h-4 text-[#0057b2] flex-shrink-0 mt-1" />
+                <div className="text-sm font-mono flex flex-col gap-1">
+                  <span>+91 9476-355729</span>
+                  <span>+91 94321-25545</span>
+                </div>
               </li>
             </ul>
           </div>
 
         </div>
-      </div>
 
-      {/* Bottom Sub-Footer Bar */}
-      <div className="bg-[#001938] border-t border-[#003a7a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-blue-300 text-xs font-medium text-center md:text-left tracking-wide">
-            &copy; {new Date().getFullYear()} IEEE SPeCS. All rights reserved. NIT Silchar.
+        {/* Gradient Divider */}
+        <div className="w-full h-px bg-gradient-to-r from-[#0057b2] via-[#0057b2] via-[75%] to-[#7ed957] mb-8"></div>
+
+        {/* Bottom Section: Copyright */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 font-medium">
+          <p>
+            &copy; {currentYear > 2027 ? currentYear : 2027} IEEE SPeCS. All rights reserved.
           </p>
-          <div className="text-blue-300 text-xs font-medium uppercase tracking-wider">
-            Record No. #69741
+          <div className="flex items-center gap-4">
+            <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <span>|</span>
+            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
+
       </div>
     </footer>
   );
