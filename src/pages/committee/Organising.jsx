@@ -11,106 +11,98 @@ export default function Organising() {
     {
       role: "Patrons",
       members: [
-        { name: "Prof. Debangshu Dey", affiliation: "Chair, IEEE Kolkata Section", image: "/dey.png" },
-        { name: "Dr. Asha Rani M. A", affiliation: "Chair, IEEE Silchar Subsection", image: null }
+        { name: "Asha Rani M. A", affiliation: "Chair, IEEE Silchar Subsection", image: null },
+        { name: "Biswendu Chatterjee", affiliation: "Chair, IEEE SPS Kolkata Section", image: null },
+        { name: "Debangshu Dey", affiliation: "Chair, IEEE Kolkata Section", image: "/dey.png" },
       ]
     },
     {
-      role: "Co-Patrons",
+      role: "Honorary General Chairs",
       members: [
-        { name: "Prof. Nidul Sinha", affiliation: "NIT Silchar", image: null },
-        { name: "Prof. B. K. Roy", affiliation: "NIT Silchar", image: null }
+        { name: "Antonio Visioli", affiliation: "University of Brescia, Italy", image: null },
+        { name: "Ram Bilash Pachori", affiliation: "IIT Indore", image: null },
+        { name: "Sushmita Mitra", affiliation: "ISI, Kolkata", image: null },
       ]
     },
     {
-      role: "Organizing Chairs",
+      role: "General Chairs",
       members: [
-        { name: "Dr. Biswarup Ganguly", affiliation: "NIT Silchar", image: null },
-        { name: "Dr. Prasanta Roy", affiliation: "NIT Silchar", image: null }
-      ]
-    },
-    {
-      role: "Organizing Secretary",
-      members: [
-        { name: "Dr. Tapan Pradhan", affiliation: "NIT Silchar", image: null },
-        { name: "Dr. Sunil Kumar Mishra", affiliation: "NIT Silchar", image: null }
+        { name: "Dulal Chandra Das", affiliation: "NIT Silchar", image: null },
+        { name: "Rajeeb Dey", affiliation: "NIT Silchar", image: null },
+        { name: "Sovan Dalai", affiliation: "Jadavpur University", image: null },
       ]
     },
     {
       role: "Technical Program Chairs",
       members: [
-        { name: "Prof. N B Dev Choudhury", affiliation: "NIT Silchar", image: null },
-        { name: "Dr. Dulal Chandra Das", affiliation: "NIT Silchar", image: null },
-        { name: "Dr. Munmun Khanra", affiliation: "NIT Silchar", image: null }
+        { name: "N B Dev Choudhury", affiliation: "NIT Silchar", image: null },
+        { name: "Arup Kumar Goswami", affiliation: "NIT Silchar", image: null },
+      ]
+    },
+    {
+      role: "Organizing Chairs",
+      members: [
+        { name: "Biswarup Ganguly", affiliation: "NIT Silchar", image: null },
+        { name: "Prasanta Roy", affiliation: "NIT Silchar", image: null }
+      ]
+    },
+    {
+      role: "Organizing Secretary",
+      members: [
+        { name: "Sunil Kumar Mishra", affiliation: "NIT Silchar", image: null },
+        { name: "Susanta Ray", affiliation: "IEEE Kolkata Section", image: null },
+        { name: "Tapan Pradhan", affiliation: "NIT Silchar", image: null },
       ]
     },
     {
       role: "Publication Chairs",
       members: [
-        { name: "Dr. R. K. Biswas", affiliation: "NIT Silchar", image: null },
-        { name: "Dr. Partha Kayal", affiliation: "NIT Silchar", image: null },
-        { name: "Dr. Tridibesh Nag", affiliation: "Vice-Chair, IEEE Kolkata Section", image: null }
-      ]
-    },
-    {
-      role: "Industry Interaction and Sponsorship Chairs",
-      members: [
-        { name: "Prof. N B Dev Choudhury", affiliation: "NIT Silchar", image: null },
-        { name: "Dr. Monalisa Pal", affiliation: "Mathworks India Pvt. Ltd", image: null },
-        { name: "Dr. Ranjay Hazra", affiliation: "NIT Silchar", image: null },
-        { name: "Dr. Diwakar Naik", affiliation: "NIT Silchar", image: null }
-      ]
-    },
-    {
-      role: "Website Chairs",
-      members: [
-        { name: "Ashish Paramane", affiliation: "NIT Silchar", image: null },
-        { name: "Dr. Swapna Mansani", affiliation: "NIT Silchar", image: null },
-        { name: "Dr. Partha Pakray", affiliation: "NIT Silchar", image: null }
-      ]
-    },
-    {
-      role: "Publicity Chairs",
-      members: [
-        { name: "Dr. Biswajit Sahoo", affiliation: "NIT Silchar", image: null },
-        { name: "Dr. Sreejith. S", affiliation: "NIT Silchar", image: null }
+        { name: "Partha Kayal", affiliation: "NIT Silchar", image: null },
+        { name: "R. K. Biswas", affiliation: "NIT Silchar", image: null },
+        { name: "Tridibesh Nag", affiliation: "Vice-Chair, IEEE Kolkata Section", image: null }
       ]
     },
     {
       role: "Women in Engineering Chairs",
       members: [
-        { name: "Dr. Nabanita Adhikary", affiliation: "NIT Silchar", image: null },
-        { name: "Dr. Saheli Ray", affiliation: "NIT Silchar", image: null },
-        { name: "Dr. Anwesha Khasnobish", affiliation: "TCS Research, Kolkata, India", image: null }
+        { name: "Anwesha Khasnobish", affiliation: "TCS Research, Kolkata, India", image: null },
+        { name: "Nabanita Adhikary", affiliation: "NIT Silchar", image: null },
+        { name: "Saheli Ray", affiliation: "NIT Silchar", image: null },
       ]
     },
     {
-      role: "Student Activity Chairs",
+      role: "Industry Interaction Chairs",
       members: [
-        { name: "Dr. Mallikarjuna Balimidi", affiliation: "NIT Silchar", image: null },
-        { name: "Dr. Vivekanandan S", affiliation: "NIT Silchar", image: null }
+        { name: "Amritesh Kumar", affiliation: "NIT Silchar", image: null },
+        { name: "Monalisa Pal", affiliation: "Mathworks India Pvt. Ltd", image: null },
+        { name: "Sanjay Kar Chowdhury", affiliation: "CESC Pvt Ltd, Kolkata", image: null },
       ]
     },
     {
       role: "Finance Chair",
       members: [
-        { name: "Debayan Sarkar", affiliation: "NIT Silchar", image: null }
+        { name: "Biswajit Sahoo", affiliation: "NIT Silchar", image: null }
       ]
+    },
+    {
+      role: "Website Chairs",
+      members: [] // Set to empty to trigger "To be updated"
+    },
+    {
+      role: "Publicity Chairs",
+      members: [] 
+    },
+    {
+      role: "Student Activity Chairs",
+      members: [] 
     },
     {
       role: "Special Sessions/Tutorial Chairs",
-      members: [
-        { name: "Dr. Sreenu Sreekumar", affiliation: "NIT Silchar", image: null },
-        { name: "Dr. Ambrish Devanshu", affiliation: "NIT Silchar", image: null },
-        { name: "Dr. Anagha Bhattacharya", affiliation: "NIT Mizoram", image: null }
-      ]
+      members: [] 
     },
     {
       role: "Hospitality Chairs",
-      members: [
-        { name: "Dr. C Bhattacharya", affiliation: "NIT Silchar", image: null },
-        { name: "Dr. Avadh Pati", affiliation: "NIT Silchar", image: null }
-      ]
+      members: [] 
     }
   ];
 
@@ -139,33 +131,42 @@ export default function Organising() {
               </h2>
 
               <div className="flex flex-wrap justify-center items-stretch gap-8">
-                {group.members.map((member, memberIdx) => (
-                  <div key={memberIdx} className="flex flex-col items-center bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg hover:border-[#0057b2]/30 transition-all max-w-[280px] w-full group">
-                    
-                    {/* Image / Initial Placeholder */}
-                    {member.image ? (
-                      <div className="w-32 h-32 rounded-full overflow-hidden mb-5 border-4 border-slate-50 shadow-inner group-hover:border-[#7ed957]/30 transition-colors">
-                        <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-                      </div>
-                    ) : (
-                      <div className="w-32 h-32 rounded-full bg-slate-100 border-4 border-slate-50 shadow-inner mb-5 flex items-center justify-center group-hover:bg-[#0057b2]/5 transition-colors">
-                         <span className="text-[#0057b2] font-serif font-bold text-4xl opacity-40">
-                            {member.name.charAt(0)}
-                         </span>
-                      </div>
-                    )}
+                {group.members.length > 0 ? (
+                  group.members.map((member, memberIdx) => (
+                    <div key={memberIdx} className="flex flex-col items-center bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg hover:border-[#0057b2]/30 transition-all max-w-[280px] w-full group">
+                      
+                      {/* Image / Initial Placeholder */}
+                      {member.image ? (
+                        <div className="w-32 h-32 rounded-full overflow-hidden mb-5 border-4 border-slate-50 shadow-inner group-hover:border-[#7ed957]/30 transition-colors">
+                          <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                        </div>
+                      ) : (
+                        <div className="w-32 h-32 rounded-full bg-slate-100 border-4 border-slate-50 shadow-inner mb-5 flex items-center justify-center group-hover:bg-[#0057b2]/5 transition-colors">
+                           <span className="text-[#0057b2] font-serif font-bold text-4xl opacity-40">
+                              {member.name.charAt(0)}
+                           </span>
+                        </div>
+                      )}
 
-                    {/* Member Details */}
-                    <div className="text-center mt-auto">
-                      <h3 className="font-serif text-lg text-[#0057b2] font-bold leading-snug mb-1">
-                        {member.name}
-                      </h3>
-                      <p className="text-sm text-slate-600 font-medium leading-snug">
-                        {member.affiliation}
-                      </p>
+                      {/* Member Details */}
+                      <div className="text-center mt-auto">
+                        <h3 className="font-serif text-lg text-[#0057b2] font-bold leading-snug mb-1">
+                          {member.name}
+                        </h3>
+                        <p className="text-sm text-slate-600 font-medium leading-snug">
+                          {member.affiliation}
+                        </p>
+                      </div>
                     </div>
+                  ))
+                ) : (
+                  /* "To be updated" Placeholder for empty arrays */
+                  <div className="w-full flex justify-center -mt-4">
+                    <span className="px-6 py-2 bg-slate-100 text-slate-500 font-medium rounded-full text-sm uppercase tracking-widest border border-slate-200 shadow-sm">
+                      To be updated
+                    </span>
                   </div>
-                ))}
+                )}
               </div>
             </div>
           ))}

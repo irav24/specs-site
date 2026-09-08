@@ -63,7 +63,7 @@ export default function Navbar() {
               
               <span className="text-white/40">|</span>
               <span>Venue: NIT Silchar </span>
-              <span className="text-[#7ed957] font-bold tracking-widest ml-1 md:ml-2">REC: #69741</span>
+              <span className="text-[#7ed957] font-bold tracking-widest ml-1 md:ml-2">REC: #73917</span>
             </div>
           ))}
         </div>
