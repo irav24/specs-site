@@ -18,10 +18,11 @@ export default function Footer() {
               IEEE SPeCS <span className="text-[#7ed957]">2027</span>
             </h2>
             <p className="text-sm leading-relaxed mb-6">
-              13th IEEE International Conference on Signal, Power & Computing Systems. Bridging foundational research with applied engineering paradigms.
+              IEEE Conference on Signal, Power & Computing Systems. Bridging foundational research with applied engineering paradigms.
             </p>
             <div className="flex items-center gap-4">
-              <img src="/nitslogo.png" alt="NIT Silchar" className="h-12 w-auto " />
+              <img src="/nitslogo.png" alt="NIT Silchar Logo" className="h-16 lg:h-20 w-auto object-contain" />
+              
               
             </div>
           </div>

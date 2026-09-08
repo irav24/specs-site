@@ -53,7 +53,7 @@ export default function Home() {
           {/* The "Pow" Headline (White text with Lime Green Highlight) */}
           {/* The "Pow" Headline (White text with Lime Green Highlight) */}
 <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-8 drop-shadow-lg">
-  International Conference on <br />
+  IEEE Conference on <br />
   <span className="text-[#7ed957]">S</span>ignal,{' '}
   <span className="text-[#7ed957]">P</span>ow<span className="text-[#7ed957]">e</span>r &{' '}
   <span className="text-[#7ed957]">C</span>omputing{' '}
