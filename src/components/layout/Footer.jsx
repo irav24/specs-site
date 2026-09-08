@@ -22,7 +22,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-4">
               <img src="/nitslogo.png" alt="NIT Silchar" className="h-12 w-auto " />
-              <img src="/ieeelogo.png" alt="IEEE" className="h-8 w-auto " />
+              
             </div>
           </div>
 

@@ -11,7 +11,7 @@ export default function Navbar() {
     {
       label: "Committee", path: "/committee/organising",
       children: [
-        { label: "Steering Committee", path: "/committee/steering" }, 
+         
         { label: "Organising Committee", path: "/committee/organising" }, 
         { label: "Advisory Committee", path: "/committee/advisory" }
       ]
@@ -92,17 +92,12 @@ export default function Navbar() {
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-slate-900 tracking-tight mb-1">
               IEEE SPeCS 2027
             </h1>
-            <h2 className="text-sm font-semibold text-[#0057b2] uppercase tracking-wider max-w-lg mx-auto">
-              13th International Conference
-            </h2>
           </div>
 
           {/* Right Side: NITS & IEEE Logos */}
           <div className="hidden md:flex w-full md:w-1/4 items-center justify-end gap-6">
              <img src="/nitslogo.png" alt="NIT Silchar Logo" className="h-16 lg:h-20 w-auto object-contain" />
-             <div className="text-center">
-               <img src="/ieeelogo.png" alt="IEEE Logo" className="h-10 lg:h-12 w-auto object-contain mx-auto" />
-             </div>
+             
           </div>
 
         </div>

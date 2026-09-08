@@ -47,16 +47,19 @@ export default function Home() {
           
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-8 text-white text-xs font-mono font-bold uppercase tracking-widest">
             <span className="w-1.5 h-1.5 rounded-full bg-[#7ed957] animate-pulse"></span>
-            May 25 – 27, 2027 • NIT Silchar, India
+            May 24 – 26, 2027 • NIT Silchar, India
           </div>
           
           {/* The "Pow" Headline (White text with Lime Green Highlight) */}
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-8 drop-shadow-lg">
-            International Conference on <br />
-            <span className="text-[#7ed957]">
-              Signal, Power & Computing
-            </span> Systems.
-          </h1>
+          {/* The "Pow" Headline (White text with Lime Green Highlight) */}
+<h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-8 drop-shadow-lg">
+  International Conference on <br />
+  <span className="text-[#7ed957]">S</span>ignal,{' '}
+  <span className="text-[#7ed957]">P</span>ow<span className="text-[#7ed957]">e</span>r &{' '}
+  <span className="text-[#7ed957]">C</span>omputing{' '}
+  <span className="text-[#7ed957]">S</span>ystems
+</h1>
+
           
           <p className="text-slate-200 text-lg md:text-xl max-w-3xl mx-auto font-medium leading-relaxed mb-12 drop-shadow-md">
             The premier technical venue bridging foundational research with applied engineering paradigms.
