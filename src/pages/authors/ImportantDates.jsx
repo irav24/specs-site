@@ -6,8 +6,8 @@ export default function ImportantDates() {
     {
       id: 1,
       title: "Paper Submission Starts",
-      date: "September 10, 2026",
-      description: "The submission portal opens. Authors are invited to submit their original research manuscripts.",
+      date: "September 10, 2027",
+      
       icon: <FileText className="w-6 h-6 text-white" />,
       color: "bg-[#0057b2]",
             isHighlight: true
@@ -16,8 +16,8 @@ export default function ImportantDates() {
     {
       id: 2,
       title: "Paper Submission Deadline",
-      date: "December 31, 2026",
-      description: "Final deadline for all manuscript submissions.",
+      date: "December 31, 2027",
+      
       icon: <Clock className="w-6 h-6 text-white" />,
       color: "bg-[#0057b2]",
             isHighlight: true
@@ -26,8 +26,7 @@ export default function ImportantDates() {
     {
       id: 3,
       title: "Paper Acceptance Notification",
-      date: "January 31, 2026",
-      description: "Authors will be notified of the review committee's decision regarding their submission.",
+      date: "January 31, 2027",
       icon: <CheckCircle2 className="w-6 h-6 text-white" />,
       color: "bg-[#0057b2]",
             isHighlight: true
@@ -36,8 +35,7 @@ export default function ImportantDates() {
     {
       id: 4,
       title: "Author Registration",
-      date: "February 10, 2026",
-      description: "Deadline for registration of authors",
+      date: "February 10, 2027",
       icon: <Upload className="w-6 h-6 text-white" />,
       color: "bg-[#0057b2]",
             isHighlight: true
@@ -46,8 +44,7 @@ export default function ImportantDates() {
     {
       id: 5,
       title: "Camera Ready Submission",
-      date: "February 20, 2026",
-      description: "Deadline for submitting the final, formatted version of accepted papers.",
+      date: "February 20, 2027",
       icon: <Upload className="w-6 h-6 text-white" />,
       color: "bg-[#0057b2]",
             isHighlight: true
@@ -57,7 +54,6 @@ export default function ImportantDates() {
       id: 6,
       title: "Conference Dates",
       date: "May 24 – 26, 2027",
-      description: "IEEE SPeCS 2027 takes place at NIT Silchar.",
       icon: <Calendar className="w-6 h-6 text-white" />,
       color: "bg-[#7ed957]",
       isHighlight: true
