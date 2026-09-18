@@ -3,33 +3,40 @@ import React from 'react';
 export default function OurSponsors() {
   
   // 1. Technical Co-Sponsors Array
-  // Keep adding new sponsors inside these brackets [ ] separated by commas
   const technicalSponsors = [
     { name: "Signal Processing Society, Kolkata Subsection", logo: "/Sponsor.png", tier: "Technical Co-Sponsor" },
     { name: "Silchar Subsection", logo: "/sponsor2.jpeg", tier: "Technical Co-Sponsor" },
     // ADD NEW TECHNICAL SPONSORS HERE:
-    // { name: "Example Name", logo: "/example.png", tier: "Technical Co-Sponsor" },
+    // { name: "Example Name", logo: "/example.png", tier: "Technical Co-Sponsor", sizeClass: "scale-110" },
   ];
 
   // 2. Financial Sponsors Array
-  // Keep adding new sponsors inside these brackets [ ] separated by commas
   const financialSponsors = [
-    { name: "Sponsor 1", logo: "/Sponsor.png", tier: "Financial Sponsor" },
-    
+    { 
+      name: "Sponsor 1", 
+      logo: "/Sponsor.png", 
+      tier: "Financial Sponsor", 
+      // Using scale-150 to specifically make this logo much bigger
+      sizeClass: "scale-150" 
+    },
     // ADD NEW FINANCIAL SPONSORS HERE:
     // { name: "Example Name", logo: "/example.png", tier: "Silver Sponsor" },
   ];
 
   // Reusable Card Component for clean code
   const SponsorCard = ({ sponsor }) => (
-    <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-[#0057b2]/30 transition-all flex flex-col items-center justify-center min-h-[200px] group">
-      <div className="h-20 w-full flex items-center justify-center mb-5">
+    <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-[#0057b2]/30 transition-all flex flex-col items-center justify-center min-h-[220px] group">
+      
+      {/* Increased container height to h-32 to allow for larger logos */}
+      <div className="h-32 w-full flex items-center justify-center mb-5">
         <img 
           src={sponsor.logo} 
           alt={sponsor.name} 
-          className="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300"
+          // Applies the custom sizeClass if it exists in the array above
+          className={`max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-300 ${sponsor.sizeClass || ''}`}
         />
       </div>
+      
       <div className="w-full text-center border-t border-slate-200 pt-3 mt-auto">
         <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#0057b2]">
           {sponsor.tier}
@@ -62,7 +69,7 @@ export default function OurSponsors() {
               Technical Co-Sponsors
             </h2>
             {technicalSponsors.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className={`grid grid-cols-1 gap-6 ${technicalSponsors.length === 1 ? 'max-w-sm mx-auto' : 'sm:grid-cols-2'}`}>
                 {technicalSponsors.map((sponsor, idx) => (
                   <SponsorCard key={`tech-${idx}`} sponsor={sponsor} />
                 ))}
@@ -82,7 +89,7 @@ export default function OurSponsors() {
               Financial Sponsors
             </h2>
             {financialSponsors.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className={`grid grid-cols-1 gap-6 ${financialSponsors.length === 1 ? 'max-w-sm mx-auto' : 'sm:grid-cols-2'}`}>
                 {financialSponsors.map((sponsor, idx) => (
                   <SponsorCard key={`fin-${idx}`} sponsor={sponsor} />
                 ))}

@@ -2,23 +2,23 @@ import React from 'react';
 
 export default function Technical() {
   const tpcMembers = [
-    { name: "Akshaya Kumar Pati", affiliation: "KIIT University, Bhubaneswar", email: "akshaya.patifet@kiit.ac.in" },
-    { name: "Amitkumar V. Jha", affiliation: "KIIT University, Bhubaneswar", email: "amit.jhafet@kiit.ac.in" },
-    { name: "Anagha Bhattacharya", affiliation: "NIT Mizoram", email: "anagha.eee@nitmz.ac.in" },
-    { name: "Anirban Dasgupta", affiliation: "IIT Guwahati", email: "anirban.dasgupta@iitg.ac.in" },
-    { name: "Anirudh Nath", affiliation: "IIEST Shibpur", email: "anirudh@ee.iiests.ac.in" },
-    { name: "Chandan Kumar", affiliation: "STCT, Pune", email: "chandanbobby17@gmail.com" },
-    { name: "Debraj Chakraborty", affiliation: "IIT Bombay", email: "dc@ee.iitb.ac.in" },
-    { name: "Korra Balu", affiliation: "NIT Calicut", email: "korrabalu@nitc.ac.in" },
-    { name: "Mayank Kumar", affiliation: "DTU, Delhi", email: "mayankkumar@dtu.ac.in" },
-    { name: "Nasirul Haque", affiliation: "NIT Calicut", email: "nasirul@nitc.ac.in" },
-    { name: "Pravin Malik", affiliation: "NIT Kurukshetra", email: "parveen.malik@nitkkr.ac.in" },
-    { name: "Ram Krishan", affiliation: "NIT Warangal", email: "rkrishan@nitw.ac.in" },
-    { name: "Sarasij Das", affiliation: "IISc Bengaluru", email: "sarasij@iisc.ac.in" },
-    { name: "Sourav Das", affiliation: "IEM Kolkata", email: "sourav.das@iem.edu.in" },
-    { name: "Sudipta Chakraborty", affiliation: "NIT Silchar", email: "sudipta@ei.nits.ac.in" },
-    { name: "Sumit Chatterjee", affiliation: "IIT Delhi", email: "sumit@dese.iitd.ac.in" },
-    { name: "Supratim Gupta", affiliation: "NIT Rourkela", email: "guptasu@nitrkl.ac.in" }
+    { name: "Akshaya Kumar Pati", affiliation: "KIIT University, Bhubaneswar" },
+    { name: "Amitkumar V. Jha", affiliation: "KIIT University, Bhubaneswar" },
+    { name: "Anagha Bhattacharya", affiliation: "NIT Mizoram" },
+    { name: "Anirban Dasgupta", affiliation: "IIT Guwahati" },
+    { name: "Anirudh Nath", affiliation: "IIEST Shibpur" },
+    { name: "Chandan Kumar", affiliation: "STCT, Pune" },
+    { name: "Debraj Chakraborty", affiliation: "IIT Bombay" },
+    { name: "Korra Balu", affiliation: "NIT Calicut" },
+    { name: "Mayank Kumar", affiliation: "DTU, Delhi" },
+    { name: "Nasirul Haque", affiliation: "NIT Calicut" },
+    { name: "Pravin Malik", affiliation: "NIT Kurukshetra" },
+    { name: "Ram Krishan", affiliation: "NIT Warangal" },
+    { name: "Sarasij Das", affiliation: "IISc Bengaluru" },
+    { name: "Sourav Das", affiliation: "IEM Kolkata" },
+    { name: "Sudipta Chakraborty", affiliation: "NIT Silchar" },
+    { name: "Sumit Chatterjee", affiliation: "IIT Delhi" },
+    { name: "Supratim Gupta", affiliation: "NIT Rourkela" }
   ];
 
   return (
@@ -44,16 +44,9 @@ export default function Technical() {
                 <h3 className="font-serif font-bold text-lg text-slate-900 group-hover:text-[#0057b2] transition-colors leading-snug">
                   {member.name}
                 </h3>
-                <p className="text-sm text-slate-600 font-medium mt-1.5 mb-4 flex-grow">
+                <p className="text-sm text-slate-600 font-medium mt-1.5 flex-grow">
                   {member.affiliation}
                 </p>
-                <a 
-                  href={`mailto:${member.email}`} 
-                  className="text-xs font-mono text-[#0057b2] hover:text-[#7ed957] transition-colors truncate block border-t border-slate-100 pt-3 mt-auto"
-                  title={member.email}
-                >
-                  {member.email}
-                </a>
               </div>
             ))}
           </div>

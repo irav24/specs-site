@@ -47,7 +47,7 @@ export default function Home() {
           
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-8 text-white text-xs font-mono font-bold uppercase tracking-widest">
             <span className="w-1.5 h-1.5 rounded-full bg-[#7ed957] animate-pulse"></span>
-            May 25 – 27, 2027 • NIT Silchar, India
+            May 24 – 26, 2027 • NIT Silchar, India
           </div>
           
           

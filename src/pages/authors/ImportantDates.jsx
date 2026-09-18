@@ -56,7 +56,7 @@ export default function ImportantDates() {
     {
       id: 6,
       title: "Conference Dates",
-      date: "May 25 – 27, 2027",
+      date: "May 24 – 26, 2027",
       description: "IEEE SPeCS 2027 takes place at NIT Silchar.",
       icon: <Calendar className="w-6 h-6 text-white" />,
       color: "bg-[#7ed957]",

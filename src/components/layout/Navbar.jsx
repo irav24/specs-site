@@ -114,6 +114,8 @@ export default function Navbar() {
           <div className="hidden lg:flex w-full lg:w-1/4 items-center justify-end gap-6">
              <img src="/nitslogo.png" alt="NIT Silchar Logo" className="h-16 lg:h-20 w-auto object-contain" />
              <img src="/Sponsor.png" alt="Sponsor logo" className="h-16 lg:h-20 w-auto object-contain" />
+                          <img src="/sponsor2.jpeg" alt="Sponsor logo" className="h-16 lg:h-20 w-auto object-contain" />
+
           </div>
 
         </div>
