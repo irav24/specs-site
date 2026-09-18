@@ -6,7 +6,7 @@ export default function ImportantDates() {
     {
       id: 1,
       title: "Paper Submission Starts",
-      date: "September 10, 2027",
+      date: "September 10, 2026",
       
       icon: <FileText className="w-6 h-6 text-white" />,
       color: "bg-[#0057b2]",
@@ -16,7 +16,7 @@ export default function ImportantDates() {
     {
       id: 2,
       title: "Paper Submission Deadline",
-      date: "December 31, 2027",
+      date: "December 31, 2026",
       
       icon: <Clock className="w-6 h-6 text-white" />,
       color: "bg-[#0057b2]",
