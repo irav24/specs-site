@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Download, ExternalLink, CalendarDays } from 'lucide-react';
+import { Download, ExternalLink, CalendarDays, MapPin, Building, Globe } from 'lucide-react';
 import ExploreCarousel from '../components/ExploreCarousel';
 
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState({ days: '00', hours: '00', minutes: '00', seconds: '00' });
 
   useEffect(() => {
-    const deadline = new Date('2026-12-15T00:00:00');
+    const deadline = new Date('2026-12-31T00:00:00');
     const timer = setInterval(() => {
       const diff = deadline - new Date();
       if(diff <= 0) return;
@@ -47,18 +47,18 @@ export default function Home() {
           
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-8 text-white text-xs font-mono font-bold uppercase tracking-widest">
             <span className="w-1.5 h-1.5 rounded-full bg-[#7ed957] animate-pulse"></span>
-            May 24 – 26, 2027 • NIT Silchar, India
+            May 25 – 27, 2027 • NIT Silchar, India
           </div>
           
+          
           {/* The "Pow" Headline (White text with Lime Green Highlight) */}
-          {/* The "Pow" Headline (White text with Lime Green Highlight) */}
-<h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-8 drop-shadow-lg">
-  IEEE Conference on <br />
-  <span className="text-[#7ed957]">S</span>ignal,{' '}
-  <span className="text-[#7ed957]">P</span>ow<span className="text-[#7ed957]">e</span>r &{' '}
-  <span className="text-[#7ed957]">C</span>omputing{' '}
-  <span className="text-[#7ed957]">S</span>ystems
-</h1>
+          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-8 drop-shadow-lg">
+            IEEE Conference on <br />
+            <span className="text-[#7ed957]">S</span>ignal,{' '}
+            <span className="text-[#7ed957]">P</span>ow<span className="text-[#7ed957]">e</span>r &{' '}
+            <span className="text-[#7ed957]">C</span>omputing{' '}
+            <span className="text-[#7ed957]">S</span>ystems
+          </h1>
 
           
           <p className="text-slate-200 text-lg md:text-xl max-w-3xl mx-auto font-medium leading-relaxed mb-12 drop-shadow-md">
@@ -85,27 +85,50 @@ export default function Home() {
           <div className="lg:col-span-8 space-y-16">
             
             <article>
-              <h3 className="font-serif text-3xl font-bold text-slate-900 mb-6">About SPeCS 2027</h3>
-              <div className="space-y-5 text-slate-600 text-lg leading-relaxed">
+              <h3 className="font-serif text-2xl md:text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                <Globe className="w-8 h-8 text-[#0057b2]" /> About SPeCS
+              </h3>
+              <div className="space-y-5 text-slate-600 text-base md:text-lg leading-relaxed">
                 <p>
-                  The 2027 IEEE International Conference on Signal, Power & Computing Systems (SPeCS) provides a highly structured, peer-reviewed platform for academics and industry professionals. The technical program covers advanced smart grid integration, power electronics topologies, and next-generation computing architectures.
-                </p>
-                <p>
-                  All technical submissions undergo a rigorous blind review process conducted by the Technical Program Committee. Accepted and presented papers will be submitted for possible inclusion in the IEEE Xplore Digital Library, adhering strictly to IEEE's quality metrics.
+The IEEE Conference on Signal, Power and Computing Systems (SPeCS 2027) aims to provide a premier international forum for researchers, academicians, industry professionals, and practitioners to exchange ideas, present recent advances, and discuss emerging challenges in the areas of signal processing, power and energy systems, intelligent computing, and allied technologies. The conference seeks to foster interdisciplinary collaboration and promote interactions among academia, industry, research laboratories, and government organizations. Through keynote lectures, technical sessions, tutorials, workshops, and panel discussions, SPeCS 2027 will facilitate the dissemination of innovative research and technological developments that contribute to sustainable and intelligent engineering solutions.
                 </p>
               </div>
             </article>
 
             <article>
-              <h3 className="font-serif text-3xl font-bold text-slate-900 mb-8">Publication Guidelines</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm border-t-4 border-t-[#0057b2]">
+              <h3 className="font-serif text-2xl md:text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                <MapPin className="w-8 h-8 text-[#0057b2]" /> About NIT Silchar
+              </h3>
+              <div className="space-y-5 text-slate-600 text-base md:text-lg leading-relaxed bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm border-l-4 border-l-[#7ed957]">
+                <p>
+                 
+The National Institute of Technology Silchar (NIT Silchar), an Institute of National Importance under the Ministry of Education, Government of India, is committed to excellence in education, research, innovation, and societal development. Since its inception, the institute has established itself as a leading centre for engineering, science, management, and interdisciplinary research. Spread across a lush green campus in the Barak Valley of Assam, NIT Silchar offers a vibrant academic environment supported by state-of-the-art laboratories, modern infrastructure, and a strong research ecosystem. The institute continuously strives to nurture competent professionals, innovators, and future leaders capable of addressing global technological and societal challenges.
+                </p>
+              </div>
+            </article>
+
+            <article>
+              <h3 className="font-serif text-2xl md:text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                <Building className="w-8 h-8 text-[#0057b2]" /> About the Department
+              </h3>
+              <div className="space-y-5 text-slate-600 text-base md:text-lg leading-relaxed">
+                <p>
+                  
+The Department of Electrical Engineering at NIT Silchar is one of the leading departments of electrical engineering in the North-Eastern region of India. The department is recognized for its strong academic programs, high-quality research output, and active engagement with industry and research organizations. The department offers B.Tech., M.Tech., and PhD programmes in diverse specializations including Power and Energy Systems, Control and Automation, Power Electronics and Drives, Smart Grid Technologies, Renewable Energy Systems, and Intelligent Control. Equipped with modern laboratories and advanced computational facilities, the department provides an excellent environment for cutting-edge research and innovation. The department's dedicated faculty members, research scholars, and students actively contribute to advancements in electrical engineering and related interdisciplinary domains, making it a vibrant hub for learning, research, and technological development.
+                </p>
+              </div>
+            </article>
+
+            <article>
+              <h3 className="font-serif text-2xl md:text-3xl font-bold text-slate-900 mb-8 pt-4 border-t border-slate-200">Publication Guidelines</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm border-t-4 border-t-[#0057b2] hover:shadow-md transition-shadow">
                   <h4 className="font-bold text-slate-900 mb-3 text-lg">IEEE Xplore Scoping</h4>
-                  <p className="text-slate-600 leading-relaxed">Presented records will be routed directly to IEEE for publication indexing approvals. Manuscripts must follow the standard double-column format.</p>
+                  <p className="text-slate-600 leading-relaxed text-sm md:text-base">Presented records will be routed directly to IEEE for publication indexing approvals. Manuscripts must follow the standard double-column format.</p>
                 </div>
-                <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm border-t-4 border-t-[#7ed957]">
+                <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm border-t-4 border-t-[#7ed957] hover:shadow-md transition-shadow">
                   <h4 className="font-bold text-slate-900 mb-3 text-lg">Extended Journals</h4>
-                  <p className="text-slate-600 leading-relaxed">Authors of high-scoring presented papers will be invited to route expanded technical configurations to selected technical transaction pipelines.</p>
+                  <p className="text-slate-600 leading-relaxed text-sm md:text-base">Authors of high-scoring presented papers will be invited to route expanded technical configurations to selected technical transaction pipelines.</p>
                 </div>
               </div>
             </article>
@@ -154,8 +177,8 @@ export default function Home() {
                 ].map((file, idx) => (
                   <li key={idx}>
                     <a href={file.url} className="flex items-center justify-between p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-[#0057b2] hover:border-[#0057b2] hover:text-white text-slate-700 font-semibold transition-all group">
-                      <span>{file.name}</span>
-                      <Download className="w-5 h-5 text-slate-400 group-hover:text-[#7ed957]" />
+                      <span className="truncate mr-2 text-sm md:text-base">{file.name}</span>
+                      <Download className="w-4 h-4 md:w-5 md:h-5 text-slate-400 group-hover:text-[#7ed957] flex-shrink-0" />
                     </a>
                   </li>
                 ))}

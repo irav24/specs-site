@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -12,25 +13,42 @@ export default function Navbar() {
       label: "Committee", path: "/committee/organising",
       children: [
         { label: "Organising Committee", path: "/committee/organising" }, 
-        { label: "Advisory Committee", path: "/committee/advisory" }
+        { label: "Advisory Committee", path: "/committee/advisory" },
+        { label: "Technical Program Committee", path: "/committee/technical" }
       ]
     },
     {
-      label: "Authors", path: "/authors",
-      children: [{ label: "Important Dates", path: "/authors#dates" }, { label: "Call for Papers", path: "/call-for-papers" }, { label: "Paper Submission", path: "/authors#submission" }]
+      label: "Authors", path: "/authors/important-dates",
+      children: [
+        { label: "Important Dates", path: "/authors/important-dates" }, 
+        { label: "Call for Papers", path: "/authors/call-for-papers" }, 
+        { label: "Paper Submission", path: "/authors/paper-submission" }
+      ]
     },
     { label: "Registration", path: "/registration" },
     {
       label: "Program", path: "/program",
-      children: [{ label: "At a Glance", path: "/program#glance" }, { label: "Keynote Speakers", path: "/speakers" }, { label: "Special Sessions", path: "/program#special-sessions" }, { label: "Workshop", path: "/program#workshop" }, { label: "Tutorials", path: "/program#tutorials" }]
+      children: [
+        { label: "At a Glance", path: "/program#glance" }, 
+        { label: "Keynote Speakers", path: "/speakers" }, 
+        { label: "Special Sessions", path: "/program#special-sessions" }, 
+        { label: "Workshop", path: "/program#workshop" }, 
+        { label: "Tutorials", path: "/program#tutorials" }
+      ]
     },
     {
-      label: "Sponsors", path: "/sponsors",
-      children: [{ label: "Our Sponsors", path: "/sponsors#our-sponsors" }, { label: "Sponsorship Details", path: "/sponsors#details" }]
+      label: "Sponsors", path: "/sponsors/details",
+      children: [
+        { label: "Our Sponsors", path: "/sponsors/our-sponsors" }, 
+        { label: "Sponsorship Details", path: "/sponsors/details" }
+      ]
     },
     {
       label: "Accommodation", path: "/accommodation",
-      children: [{ label: "Students", path: "/accommodation#students" }, { label: "Our Suggestion", path: "/accommodation#suggestions" }]
+      children: [
+        { label: "Student Hostels", path: "/accommodation#studentHostels" }, 
+        { label: "Hotels", path: "/accommodation#hotels" }
+      ]
     },
     { label: "Contact", path: "/contact" }
   ];
@@ -59,8 +77,6 @@ export default function Navbar() {
         <div className="animate-scroll">
           {[...Array(6)].map((_, i) => (
             <div key={i} className="flex items-center gap-6 md:gap-8 px-4 md:px-8 whitespace-nowrap text-[10px] sm:text-[11px] md:text-xs font-mono font-medium">
-              
-              
               <span className="text-white/40">|</span>
               <span>Venue: NIT Silchar </span>
               <span className="text-[#7ed957] font-bold tracking-widest ml-1 md:ml-2">REC: #73917</span>
@@ -137,18 +153,21 @@ export default function Navbar() {
                   onMouseEnter={() => setActiveDropdown(item.label)} 
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
-                  <button className={`px-4 py-3.5 text-xs font-bold uppercase tracking-wider transition-all rounded-t-sm flex items-center gap-1.5 ${
-                    activeDropdown === item.label || isActiveRoute
-                    ? "bg-white text-[#0057b2]" 
-                    : "text-white hover:bg-black/20"
-                  }`}>
+                  <Link 
+                    to={item.path} 
+                    className={`px-4 py-3.5 text-xs font-bold uppercase tracking-wider transition-all rounded-t-sm flex items-center gap-1.5 ${
+                      activeDropdown === item.label || isActiveRoute
+                      ? "bg-white text-[#0057b2]" 
+                      : "text-white hover:bg-black/20"
+                    }`}
+                  >
                     <span>{item.label}</span>
                     <svg className={`w-3 h-3 transition-transform duration-200 ${activeDropdown === item.label ? "rotate-180" : ""}`} fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>
-                  </button>
+                  </Link>
 
-                  {/* Dropdown */}
+                  {/* Dropdown Menu */}
                   {activeDropdown === item.label && (
                     <div className="absolute left-0 top-full pt-0 min-w-[240px] z-50">
                       <div className="bg-white rounded-b-xl rounded-tr-xl p-2 shadow-2xl border border-slate-200 border-t-[#0057b2] border-t-2 relative overflow-hidden">
@@ -182,20 +201,20 @@ export default function Navbar() {
                     end={item.path === "/"}
                     onClick={() => !item.children && setIsMobileMenuOpen(false)}
                     className={({ isActive }) => `
-                      block px-4 py-3 text-sm font-bold transition-colors uppercase tracking-widest rounded-md
-                      ${isActive && !item.children ? "bg-white text-[#0057b2]" : "text-white hover:bg-black/20"}
+                      block px-4 py-2.5 text-sm font-bold transition-colors uppercase tracking-widest
+                      ${isActive && !item.children ? "bg-white text-[#0057b2] rounded-md" : "text-white hover:bg-black/20 rounded-md"}
                     `}
                   >
                     {item.label}
                   </NavLink>
                   {item.children && (
-                    <div className="pl-6 space-y-1 my-1.5 border-l-2 border-white/30 ml-4">
+                    <div className="pl-6 space-y-1 my-1 border-l-2 border-white/30 ml-4">
                       {item.children.map((sub) => (
                         <Link
                           key={sub.label}
                           to={sub.path}
                           onClick={() => setIsMobileMenuOpen(false)}
-                          className="block px-3 py-2.5 text-sm font-medium text-white/90 hover:text-white hover:bg-black/10 transition-colors rounded-md"
+                          className="block px-3 py-2 text-sm font-medium text-white/90 hover:text-white hover:bg-black/10 transition-colors rounded-md"
                         >
                           {sub.label}
                         </Link>

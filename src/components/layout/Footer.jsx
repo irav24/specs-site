@@ -35,8 +35,8 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { name: "Home", path: "/" },
-                { name: "Call for Papers", path: "/call-for-papers" },
-                { name: "Important Dates", path: "/authors#dates" },
+                { name: "Call for Papers", path: "/authors/call-for-papers" },
+                { name: "Important Dates", path: "/authors/important-dates" },
                 { name: "Registration Fees", path: "/registration" },
                 { name: "Organising Committee", path: "/committee/organising" }
               ].map((link, idx) => (

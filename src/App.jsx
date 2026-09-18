@@ -3,10 +3,14 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import MainLayout from "./components/layout/MainLayout";
 
 import Home from "./pages/Home";
-import Papers from "./pages/Papers";
+import Papers from "./pages/authors/Papers";
+import ImportantDates from "./pages/authors/ImportantDates";
 import Registration from "./pages/Registration";
 import Organising from './pages/committee/Organising';
 import Advisory from './pages/committee/Advisory';
+import Technical from './pages/committee/Technical';
+import OurSponsors from './pages/sponsors/oursponsors';
+import SponsorshipDetails from './pages/sponsors/SponsorshipDetails';
 import Contact from "./pages/Contact";
 
 // Helper to scroll to top on route change
@@ -22,7 +26,7 @@ const ScrollToTop = () => {
 const Placeholder = ({ title }) => (
   <div className="min-h-[60vh] flex items-center justify-center bg-slate-50">
     <div className="text-center">
-      <div className="inline-block px-3 py-1 mb-4 rounded-full bg-blue-100 text-blue-700 text-xs font-bold tracking-wide uppercase">
+      <div className="inline-block px-3 py-1 mb-4 rounded-full bg-blue-100 text-[#0057b2] text-xs font-bold tracking-wide uppercase">
         Under Construction
       </div>
       <h2 className="text-3xl font-bold text-slate-800">{title}</h2>
@@ -38,19 +42,28 @@ export default function App() {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
-          <Route path="call-for-papers" element={<Papers />} />
+          
+          {/* Authors Section Routes */}
+          <Route path="authors/important-dates" element={<ImportantDates />} />
+          <Route path="authors/call-for-papers" element={<Papers />} />
+          <Route path="authors/paper-submission" element={<Placeholder title="Paper Submission Engine" />} />
+          
           <Route path="registration" element={<Registration />} />
           
+          {/* Committee Routes */}
           <Route path="/committee/organising" element={<Organising />} />
+          <Route path="/committee/advisory" element={<Advisory />} />
+          <Route path="/committee/technical" element={<Technical />} />
 
-<Route path="/committee/advisory" element={<Advisory />} />
+          {/* Sponsors Section Routes */}
+          <Route path="/sponsors/our-sponsors" element={<OurSponsors />} />
+          <Route path="/sponsors/details" element={<SponsorshipDetails />} />
+
           <Route path="contact" element={<Contact />} />
           
-          {/* New Dropdown Link Routes */}
-          <Route path="authors" element={<Placeholder title="Authors Information" />} />
+          {/* New Dropdown Link Routes (Placeholders) */}
           <Route path="program" element={<Placeholder title="Conference Program" />} />
           <Route path="speakers" element={<Placeholder title="Keynote Speakers" />} />
-          <Route path="sponsors" element={<Placeholder title="Sponsors" />} />
           <Route path="accommodation" element={<Placeholder title="Accommodation" />} />
           
           {/* Catch-all to prevent white screen of death */}
