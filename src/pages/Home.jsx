@@ -102,8 +102,7 @@ The IEEE Conference on Signal, Power and Computing Systems (SPeCS 2027) aims to 
               <div className="space-y-5 text-slate-600 text-base md:text-lg leading-relaxed bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm border-l-4 border-l-[#7ed957]">
                 <p>
                  
-The National Institute of Technology Silchar (NIT Silchar), an Institute of National Importance under the Ministry of Education, Government of India, is committed to excellence in education, research, innovation, and societal development. Since its inception, the institute has established itself as a leading centre for engineering, science, management, and interdisciplinary research. Spread across a lush green campus in the Barak Valley of Assam, NIT Silchar offers a vibrant academic environment supported by state-of-the-art laboratories, modern infrastructure, and a strong research ecosystem. The institute continuously strives to nurture competent professionals, innovators, and future leaders capable of addressing global technological and societal challenges.
-                </p>
+*National Institute of Technology Silchar (NIT Silchar), established in 1967 as a Regional Engineering College and accorded the status of an Institute of National Importance in 2002, is one of the premier technical institutions in Assam, India. Spread across a sprawling 600-acre lush green campus, enriched by numerous natural lakes, the Institute provides a vibrant academic and research environment supported by state-of-the-art infrastructure, quality technical education, and consistently strong placement records. Its strong commitment to innovation, interdisciplinary research, and academic excellence makes NIT Silchar an ideal venue for hosting an international conference of such stature*                </p>
               </div>
             </article>
 

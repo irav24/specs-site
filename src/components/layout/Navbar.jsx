@@ -111,9 +111,9 @@ export default function Navbar() {
           </div>
 
           {/* Right Side: NITS & IEEE Logos (Hidden on small screens to save space) */}
-          <div className="hidden lg:flex w-full lg:w-1/4 items-center justify-end gap-6">
+          <div className="hidden lg:flex w-full lg:w-1/4 items-center justify-end gap-4">
              <img src="/nitslogo.png" alt="NIT Silchar Logo" className="h-16 lg:h-20 w-auto object-contain" />
-             <img src="/Sponsor.png" alt="Sponsor logo" className="h-16 lg:h-20 w-auto object-contain" />
+             <img src="/Sponsor.png" alt="Sponsor logo" className="h-16 lg:h-28 w-auto object-contain" />
                           <img src="/sponsor2.jpeg" alt="Sponsor logo" className="h-16 lg:h-20 w-auto object-contain" />
 
           </div>
