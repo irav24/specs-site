@@ -50,6 +50,7 @@ export default function Navbar() {
         { label: "Hotels", path: "/accommodation#hotels" }
       ]
     },
+    { label: "How to Reach", path: "/how-to-reach" },
     { label: "Contact", path: "/contact" }
   ];
 
@@ -114,8 +115,7 @@ export default function Navbar() {
           <div className="hidden lg:flex w-full lg:w-1/4 items-center justify-end gap-4">
              <img src="/nitslogo.png" alt="NIT Silchar Logo" className="h-16 lg:h-20 w-auto object-contain" />
              <img src="/Sponsor.png" alt="Sponsor logo" className="h-16 lg:h-28 w-auto object-contain" />
-                          <img src="/sponsor2.jpeg" alt="Sponsor logo" className="h-16 lg:h-20 w-auto object-contain" />
-
+             <img src="/sponsor2.jpeg" alt="Sponsor logo" className="h-16 lg:h-20 w-auto object-contain" />
           </div>
 
         </div>
@@ -129,7 +129,7 @@ export default function Navbar() {
           <div className="hidden lg:flex flex-wrap items-center justify-center gap-1 py-0">
             {navLinks.map((item) => {
               const hasDropdown = Boolean(item.children);
-              const isActiveRoute = location.pathname.startsWith(`/${item.label.toLowerCase()}`) || (item.path === "/" && location.pathname === "/");
+              const isActiveRoute = location.pathname.startsWith(`/${item.label.toLowerCase().replace(/\s+/g, '-')}`) || (item.path === "/" && location.pathname === "/");
 
               if (!hasDropdown) {
                 return (
