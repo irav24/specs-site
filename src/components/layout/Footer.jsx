@@ -22,8 +22,6 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-4">
               <img src="/nitslogo.png" alt="NIT Silchar Logo" className="h-16 lg:h-20 w-auto object-contain" />
-              
-              
             </div>
           </div>
 
@@ -57,10 +55,11 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               {[
-                { name: "Paper Submission", path: "/authors#submission" },
-                { name: "IEEE Templates", url: "https://www.ieee.org" },
+                { name: "Paper Submission", path: "/authors/paper-submission" },
+                { name: "IEEE Templates", url: "https://www.ieee.org/conferences/publishing/templates" },
                 { name: "Accommodation", path: "/accommodation" },
-                { name: "Sponsorship Details", path: "/sponsors" },
+                { name: "How to Reach", path: "/how-to-reach" },
+                { name: "Sponsorship Details", path: "/sponsors/details" },
                 { name: "Conference Program", path: "/program" }
               ].map((link, idx) => (
                 <li key={idx}>

@@ -154,7 +154,7 @@ export default function CallForPapers() {
             <a href="https://cmt3.research.microsoft.com" target="_blank" rel="noreferrer" className="px-8 py-4 bg-[#0057b2] text-white font-bold uppercase tracking-wider rounded-xl hover:bg-[#004185] transition-colors shadow-md flex items-center gap-2 w-full sm:w-auto justify-center">
               Microsoft CMT Portal <ExternalLink className="w-4 h-4 text-[#7ed957]" />
             </a>
-            <a href="https://www.ieee.org" target="_blank" rel="noreferrer" className="px-8 py-4 bg-slate-100 text-slate-700 font-bold uppercase tracking-wider rounded-xl hover:bg-slate-200 transition-colors flex items-center gap-2 w-full sm:w-auto justify-center">
+            <a href="https://www.ieee.org/conferences/publishing/templates" target="_blank" rel="noreferrer" className="px-8 py-4 bg-slate-100 text-slate-700 font-bold uppercase tracking-wider rounded-xl hover:bg-slate-200 transition-colors flex items-center gap-2 w-full sm:w-auto justify-center">
               IEEE Templates <Download className="w-4 h-4 text-[#0057b2]" />
             </a>
           </div>

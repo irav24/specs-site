@@ -12,6 +12,7 @@ import Technical from './pages/committee/Technical';
 import OurSponsors from './pages/sponsors/oursponsors';
 import SponsorshipDetails from './pages/sponsors/SponsorshipDetails';
 import Contact from "./pages/Contact";
+import Reach from "./pages/Reach"; // <-- Imported the new Reach component
 
 // Helper to scroll to top on route change
 const ScrollToTop = () => {
@@ -60,6 +61,9 @@ export default function App() {
           <Route path="/sponsors/details" element={<SponsorshipDetails />} />
 
           <Route path="contact" element={<Contact />} />
+          
+          {/* How to Reach Route */}
+          <Route path="how-to-reach" element={<Reach />} />
           
           {/* New Dropdown Link Routes (Placeholders) */}
           <Route path="program" element={<Placeholder title="Conference Program" />} />
