@@ -6,7 +6,7 @@ export default function ImportantDates() {
     {
       id: 1,
       title: "Paper Submission Starts",
-      date: "September 10, 2026",
+      date: "November 5, 2026",
       
       icon: <FileText className="w-6 h-6 text-white" />,
       color: "bg-[#0057b2]",
@@ -16,7 +16,7 @@ export default function ImportantDates() {
     {
       id: 2,
       title: "Paper Submission Deadline",
-      date: "December 31, 2026",
+      date: "January 20, 2027",
       
       icon: <Clock className="w-6 h-6 text-white" />,
       color: "bg-[#0057b2]",
@@ -26,7 +26,7 @@ export default function ImportantDates() {
     {
       id: 3,
       title: "Paper Acceptance Notification",
-      date: "January 31, 2027",
+      date: "February 28, 2027",
       icon: <CheckCircle2 className="w-6 h-6 text-white" />,
       color: "bg-[#0057b2]",
             isHighlight: true
@@ -35,7 +35,7 @@ export default function ImportantDates() {
     {
       id: 4,
       title: "Author Registration",
-      date: "February 10, 2027",
+      date: "March 10, 2027",
       icon: <Upload className="w-6 h-6 text-white" />,
       color: "bg-[#0057b2]",
             isHighlight: true
@@ -44,7 +44,7 @@ export default function ImportantDates() {
     {
       id: 5,
       title: "Camera Ready Submission",
-      date: "February 20, 2027",
+      date: "March 31, 2027",
       icon: <Upload className="w-6 h-6 text-white" />,
       color: "bg-[#0057b2]",
             isHighlight: true

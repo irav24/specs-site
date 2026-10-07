@@ -86,7 +86,21 @@ export default function Organising() {
     },
     {
       role: "Website Chairs",
-      members: [] // Set to empty to trigger "To be updated"
+      members: [
+                { name: "Ashish Paramane", affiliation: "NIT Silchar", image: null },
+                { name: "Partha Pakray", affiliation: "NIT Silchar", image: null }
+
+
+      ] 
+    },
+    {
+      role: "Special Sessions/Tutorial Chairs",
+      members: [
+                        { name: "Debayan Sarkar", affiliation: "NIT Silchar", image: null },
+                                        { name: "Vivekanandan S.", affiliation: "NIT Silchar", image: null }
+
+
+      ] 
     },
     {
       role: "Publicity Chairs",
@@ -96,10 +110,7 @@ export default function Organising() {
       role: "Student Activity Chairs",
       members: [] 
     },
-    {
-      role: "Special Sessions/Tutorial Chairs",
-      members: [] 
-    },
+    
     {
       role: "Hospitality Chairs",
       members: [] 

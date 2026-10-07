@@ -95,6 +95,18 @@ export default function CallForPapers() {
     }
   ];
 
+  // Data for the horizontal timeline line diagram
+  const timelineDates = [
+    { id: 1, title: "Submission Opens", date: "5th November 2026" },
+    { id: 2, title: "Submission Closes", date: "20th January 2027" },
+    { id: 3, title: "Acceptance Notification", date: "28th February 2027" },
+        { id: 4, title: "Author Registration", date: "10th March 2027" },
+
+    { id: 4, title: "Camera-Ready Submission", date: "31st March 2027" },
+    
+    { id: 8, title: "Conference Dates", date: "24 – 26 May 2027" }
+  ];
+
   return (
     <div className="bg-slate-50 min-h-screen py-16 md:py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,7 +153,115 @@ export default function CallForPapers() {
             ))}
           </div>
         </div>
+      </div>
 
+      {/* 
+        ====================================================
+        LINE DIAGRAM: SUBMISSION TIMELINE
+        ====================================================
+      */}
+      <div className="w-full bg-slate-50 border-y border-slate-200 mb-20 py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="mb-16">
+            <h2 className="font-serif text-3xl md:text-4xl font-extrabold text-slate-900 mb-3 tracking-tight">
+              Submission Timeline
+            </h2>
+            <p className="text-slate-600 text-lg font-medium">
+              Key dates for authors. Please adhere to the deadlines below.
+            </p>
+          </div>
+
+          {/* DESKTOP VIEW (Horizontal Alternating Timeline) */}
+          <div className="hidden lg:block relative py-28 overflow-x-auto">
+            <div className="min-w-[1100px] relative px-12">
+              
+              {/* Background Line */}
+              <div className="absolute top-1/2 left-8 right-8 h-1 bg-slate-300 -translate-y-1/2 rounded-full z-0"></div>
+              
+              {/* Orange/Yellow Start Line Accent */}
+              <div className="absolute top-1/2 left-8 w-12 h-1 bg-amber-500 -translate-y-1/2 rounded-full z-0"></div>
+
+              <div className="flex justify-between items-center relative z-10 w-full">
+                {timelineDates.map((item, index) => {
+                  const isTop = index % 2 === 0;
+                  return (
+                    <div key={item.id} className="relative flex flex-col items-center group cursor-default">
+                      
+                      {isTop && (
+                        <>
+                          {/* Top Card */}
+                          <div className="absolute bottom-[calc(100%+1.5rem)] w-[180px] bg-white border border-slate-200 rounded-lg p-4 shadow-sm text-center group-hover:shadow-md group-hover:border-[#0057b2]/30 transition-all">
+                            <div className="font-bold text-[#0057b2] text-[13px] mb-1 leading-snug">
+                              {item.date}
+                            </div>
+                            <div className="text-slate-700 text-sm font-medium leading-snug">
+                              {item.title}
+                            </div>
+                          </div>
+                          {/* Top Vertical Connector Stem */}
+                          <div className="absolute bottom-full h-6 w-0.5 bg-slate-300"></div>
+                        </>
+                      )}
+                      
+                      {/* Circle Node */}
+                      <div className="w-10 h-10 rounded-full bg-[#0057b2] text-white flex items-center justify-center font-bold text-sm ring-4 ring-slate-50 shadow-sm z-10 transition-transform group-hover:scale-110 group-hover:bg-[#004185]">
+                        {item.id}
+                      </div>
+
+                      {!isTop && (
+                        <>
+                          {/* Bottom Vertical Connector Stem */}
+                          <div className="absolute top-full h-6 w-0.5 bg-slate-300"></div>
+                          {/* Bottom Card */}
+                          <div className="absolute top-[calc(100%+1.5rem)] w-[180px] bg-white border border-slate-200 rounded-lg p-4 shadow-sm text-center group-hover:shadow-md group-hover:border-[#0057b2]/30 transition-all">
+                            <div className="font-bold text-[#0057b2] text-[13px] mb-1 leading-snug">
+                              {item.date}
+                            </div>
+                            <div className="text-slate-700 text-sm font-medium leading-snug">
+                              {item.title}
+                            </div>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* MOBILE & TABLET VIEW (Vertical Timeline) */}
+          <div className="lg:hidden relative max-w-xl mx-auto px-4 mt-8">
+            <div className="absolute left-[2.1rem] top-4 bottom-4 w-1 bg-slate-300 rounded-full"></div>
+            <div className="space-y-10">
+              {timelineDates.map((item) => (
+                <div key={item.id} className="relative flex items-start gap-6 group cursor-default">
+                  <div className="relative z-10 w-10 h-10 shrink-0 rounded-full bg-[#0057b2] text-white flex items-center justify-center font-bold text-sm ring-4 ring-slate-50 shadow-sm mt-1 transition-transform group-hover:scale-110">
+                    {item.id}
+                  </div>
+                  {/* Horizontal Stem for Mobile */}
+                  <div className="absolute left-[2.2rem] top-6 w-4 h-0.5 bg-slate-300"></div>
+                  
+                  <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm w-full group-hover:shadow-md transition-all group-hover:border-[#0057b2]/30 ml-2">
+                    <div className="font-bold text-[#0057b2] text-sm mb-1 leading-snug">
+                      {item.date}
+                    </div>
+                    <div className="text-slate-700 font-medium leading-snug">
+                      {item.title}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </div>
+      {/* End Timeline Block */}
+
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Submission Action Box */}
         <div className="bg-white rounded-3xl border border-slate-200 shadow-lg p-8 md:p-12 text-center max-w-4xl mx-auto relative overflow-hidden">
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-[#7ed957]"></div>
@@ -159,7 +279,6 @@ export default function CallForPapers() {
             </a>
           </div>
         </div>
-
       </div>
 
       {/* Interactive Modal Overlay for Subtracks */}
