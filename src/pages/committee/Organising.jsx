@@ -57,9 +57,9 @@ export default function Organising() {
     {
       role: "Publication Chairs",
       members: [
+        { name: "Avadh Pati", affiliation: "NIT Silchar", image: null },
         { name: "Partha Kayal", affiliation: "NIT Silchar", image: null },
-        { name: "R. K. Biswas", affiliation: "NIT Silchar", image: null },
-        { name: "Tridibesh Nag", affiliation: "Vice-Chair, IEEE Kolkata Section", image: null }
+        
       ]
     },
     {
@@ -96,8 +96,8 @@ export default function Organising() {
     {
       role: "Special Sessions/Tutorial Chairs",
       members: [
-                        { name: "Debayan Sarkar", affiliation: "NIT Silchar", image: null },
-                                        { name: "Vivekanandan S.", affiliation: "NIT Silchar", image: null }
+      { name: "Debayan Sarkar", affiliation: "NIT Silchar", image: null },
+     { name: "Vivekanandan S.", affiliation: "NIT Silchar", image: null }
 
 
       ] 
