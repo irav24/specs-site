@@ -98,15 +98,6 @@ export default function Organising() {
       ]
     },
     
-    {
-      role: "Website Chairs",
-      members: [
-                { name: "Ashish Paramane", affiliation: "NIT Silchar", image: "/ashish.jpg" },
-                { name: "Partha Pakray", affiliation: "NIT Silchar", image: "/parthapak.png" }
-
-
-      ] 
-    },
     
     {
       role: "Publicity Chairs",
@@ -135,7 +126,7 @@ export default function Organising() {
       members: [
                 { name: "Ashish Paramane", affiliation: "NIT Silchar", image: "/ashish.jpg" },
                 { name: "Partha Pakray", affiliation: "NIT Silchar", image: "/parthapak.png" },
-                                { name: "Swapna Mansani", affiliation: "NIT Silchar", image: null },
+                                { name: "Anupam Biswas", affiliation: "NIT Silchar", image: null },
 
                 
 
