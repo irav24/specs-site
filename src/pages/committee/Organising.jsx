@@ -112,8 +112,8 @@ export default function Organising() {
       role: "Publicity Chairs",
       members: [
         { name: "Sreenu Sreekumar", affiliation: "NIT Silchar", image: "/sreenu.png" },
-                { name: "Sreejith S", affiliation: "NIT Silchar", image: null },
-                                { name: "Subrata Biswas", affiliation: "IEEE SPS Kolkata Chapter", image: "/parthapak.png" }
+                { name: "Sreejith S", affiliation: "NIT Silchar", image: "./sreejith.jfif" },
+                                { name: "Subrata Biswas", affiliation: "IEEE SPS Kolkata Chapter", image: null }
 
       ] 
     },
@@ -122,7 +122,7 @@ export default function Organising() {
       members: [
         { name: "Biswajit Chakraborty", affiliation: "Megger India Pvt. Ltd", image: null },
                 { name: "Chayan Bhattacharjee", affiliation: "NIT Silchar", image: "/chayan.jpg" },
-                                { name: "Amritesh Kumar", affiliation: "NIT Silchar", image: "/amritesh.jpg" },
+                                { name: "Amritesh Kumar", affiliation: "NIT Silchar", image: "/amritesh.JPG" },
                                                                 { name: "Monalisa Pal", affiliation: "Mathworks India Pvt. Ltd.", image: null },
                                                               { name: "Ranjay Hazra", affiliation: "NIT Silchar", image: "/ranjay.jpg" }
 
