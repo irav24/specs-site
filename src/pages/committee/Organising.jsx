@@ -17,11 +17,10 @@ export default function Organising() {
       ]
     },
     {
-      role: "Honorary General Chairs",
+      role: "Honorary Chairs",
       members: [
-        { name: "Antonio Visioli", affiliation: "University of Brescia, Italy", image: null },
-        { name: "Ram Bilash Pachori", affiliation: "IIT Indore", image: null },
-        { name: "Sushmita Mitra", affiliation: "ISI, Kolkata", image: null },
+        
+        { name: "Subhas C. Mukhopadhyay", affiliation: "Macquarie University", image: null },
       ]
     },
     {
@@ -30,13 +29,6 @@ export default function Organising() {
         { name: "Dulal Chandra Das", affiliation: "NIT Silchar", image: "/dulal.jpg" },
         { name: "Rajeeb Dey", affiliation: "NIT Silchar", image: "/rajeeb.jpg" },
         { name: "Sovan Dalai", affiliation: "Jadavpur University", image: "/sovan.gif" },
-      ]
-    },
-    {
-      role: "Technical Program Chairs",
-      members: [
-        { name: "N B Dev Choudhury", affiliation: "NIT Silchar", image: "/nbdc.jpg" },
-        { name: "Arup Kumar Goswami", affiliation: "NIT Silchar", image: "/akg.jpg" },
       ]
     },
     {
@@ -55,9 +47,10 @@ export default function Organising() {
       ]
     },
     {
-      role: "Finance Chair",
+      role: "Technical Program Chairs",
       members: [
-        { name: "Biswajit Sahoo", affiliation: "NIT Silchar", image: "/sahoo.jpg" }
+        { name: "N B Dev Choudhury", affiliation: "NIT Silchar", image: "/nbdc.jpg" },
+        
       ]
     },
     {
@@ -65,15 +58,35 @@ export default function Organising() {
       members: [
         { name: "Avadh Pati", affiliation: "NIT Silchar", image: "/avadh.jpg" },
         { name: "Partha Kayal", affiliation: "NIT Silchar", image: "/partha.jpg" },
+        { name: "Megavath Diwakar Naik", affiliation: "NIT Silchar", image: "/megavath.jpg" },
+        { name: "Subhajit Maur", affiliation: "RMGEC Purulia", image: null },
         
       ]
     },
+    
+    
+    {
+      role: "Finance Chair",
+      members: [
+        { name: "Biswajit Sahoo", affiliation: "NIT Silchar", image: "/sahoo.jpg" }
+      ]
+    },
+    {
+      role: "Special Sessions/Tutorial Chairs",
+      members: [
+      { name: "Debayan Sarkar", affiliation: "NIT Silchar", image: "/debayan.JPG" },
+     { name: "Vivekanandan S.", affiliation: "NIT Silchar", image: "/vivekanandan.jpg" }
+
+
+      ] 
+    },
+    
     {
       role: "Women in Engineering Chairs",
       members: [
         { name: "Anwesha Khasnobish", affiliation: "TCS Research, Kolkata, India", image: null },
         { name: "Nabanita Adhikary", affiliation: "NIT Silchar", image: "/nabanita.jpg" },
-        { name: "Saheli Ray", affiliation: "NIT Silchar", image: "/saheli.jpg" },
+       
       ]
     },
     {
@@ -94,22 +107,46 @@ export default function Organising() {
 
       ] 
     },
+    
     {
-      role: "Special Sessions/Tutorial Chairs",
+      role: "Publicity Chairs",
       members: [
-      { name: "Debayan Sarkar", affiliation: "NIT Silchar", image: "/debayan.JPG" },
-     { name: "Vivekanandan S.", affiliation: "NIT Silchar", image: "/vivekanandan.jpg" }
+        { name: "Sreenu Sreekumar", affiliation: "NIT Silchar", image: "/sreenu.png" },
+                { name: "Sreejith S", affiliation: "NIT Silchar", image: null },
+                                { name: "Subrata Biswas", affiliation: "IEEE SPS Kolkata Chapter", image: "/parthapak.png" }
+
+      ] 
+    },
+    {
+      role: "Industry Interaction Chair",
+      members: [
+        { name: "Biswajit Chakraborty", affiliation: "Megger India Pvt. Ltd", image: null },
+                { name: "Chayan Bhattacharjee", affiliation: "NIT Silchar", image: "/chayan.jpg" },
+                                { name: "Amritesh Kumar", affiliation: "NIT Silchar", image: "/amritesh.jpg" },
+                                                                { name: "Monalisa Pal", affiliation: "Mathworks India Pvt. Ltd.", image: null },
+                                                              { name: "Ranjay Hazra", affiliation: "NIT Silchar", image: "/ranjay.jpg" }
+
+
+
+      ] 
+    },
+     {
+      role: "Website Chairs",
+      members: [
+                { name: "Ashish Paramane", affiliation: "NIT Silchar", image: "/ashish.jpg" },
+                { name: "Partha Pakray", affiliation: "NIT Silchar", image: "/parthapak.png" },
+                                { name: "Swapna Mansani", affiliation: "NIT Silchar", image: null },
+
+                
 
 
       ] 
     },
     {
-      role: "Publicity Chairs",
-      members: [] 
-    },
-    {
       role: "Student Activity Chairs",
-      members: [] 
+      members: [
+        { name: "Ambrish Devanshu", affiliation: "NIT Silchar", image: "/ambrish.jpeg" },
+      ] 
     },
     
     {
