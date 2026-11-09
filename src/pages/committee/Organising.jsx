@@ -5,13 +5,13 @@ export default function Organising() {
     {
       role: "Chief Patron",
       members: [
-        { name: "Prof. Dilip Kumar Baidya", affiliation: "Director, NIT Silchar", image: "/baidya.png" }
+        { name: "Prof. Dilip Kumar Baidya", affiliation: "Director, NIT Silchar", image: "/director.JPG" }
       ]
     },
     {
       role: "Patrons",
       members: [
-        { name: "Asha Rani M. A", affiliation: "Chair, IEEE Silchar Subsection", image: null },
+        { name: "Asha Rani M. A", affiliation: "Chair, IEEE Silchar Subsection", image: "/asha.jpg" },
         { name: "Biswendu Chatterjee", affiliation: "Chair, IEEE SPS Kolkata Section", image: null },
         { name: "Debangshu Dey", affiliation: "Chair, IEEE Kolkata Section", image: "/dey.png" },
       ]
@@ -27,38 +27,44 @@ export default function Organising() {
     {
       role: "General Chairs",
       members: [
-        { name: "Dulal Chandra Das", affiliation: "NIT Silchar", image: null },
-        { name: "Rajeeb Dey", affiliation: "NIT Silchar", image: null },
-        { name: "Sovan Dalai", affiliation: "Jadavpur University", image: null },
+        { name: "Dulal Chandra Das", affiliation: "NIT Silchar", image: "/dulal.jpg" },
+        { name: "Rajeeb Dey", affiliation: "NIT Silchar", image: "/rajeeb.jpg" },
+        { name: "Sovan Dalai", affiliation: "Jadavpur University", image: "/sovan.gif" },
       ]
     },
     {
       role: "Technical Program Chairs",
       members: [
-        { name: "N B Dev Choudhury", affiliation: "NIT Silchar", image: null },
-        { name: "Arup Kumar Goswami", affiliation: "NIT Silchar", image: null },
+        { name: "N B Dev Choudhury", affiliation: "NIT Silchar", image: "/nbdc.jpg" },
+        { name: "Arup Kumar Goswami", affiliation: "NIT Silchar", image: "/akg.jpg" },
       ]
     },
     {
       role: "Organizing Chairs",
       members: [
-        { name: "Biswarup Ganguly", affiliation: "NIT Silchar", image: null },
-        { name: "Prasanta Roy", affiliation: "NIT Silchar", image: null }
+        { name: "Biswarup Ganguly", affiliation: "NIT Silchar", image: "/ganguly.jpg" },
+        { name: "Prasanta Roy", affiliation: "NIT Silchar", image: "/prasanta.jpg" }
       ]
     },
     {
       role: "Organizing Secretary",
       members: [
-        { name: "Sunil Kumar Mishra", affiliation: "NIT Silchar", image: null },
+        { name: "Sunil Kumar Mishra", affiliation: "NIT Silchar", image: "/skm.jpg" },
         { name: "Susanta Ray", affiliation: "IEEE Kolkata Section", image: null },
-        { name: "Tapan Pradhan", affiliation: "NIT Silchar", image: null },
+        { name: "Tapan Pradhan", affiliation: "NIT Silchar", image: "/tapan.jpg" },
+      ]
+    },
+    {
+      role: "Finance Chair",
+      members: [
+        { name: "Biswajit Sahoo", affiliation: "NIT Silchar", image: "/sahoo.jpg" }
       ]
     },
     {
       role: "Publication Chairs",
       members: [
-        { name: "Avadh Pati", affiliation: "NIT Silchar", image: null },
-        { name: "Partha Kayal", affiliation: "NIT Silchar", image: null },
+        { name: "Avadh Pati", affiliation: "NIT Silchar", image: "/avadh.jpg" },
+        { name: "Partha Kayal", affiliation: "NIT Silchar", image: "/partha.jpg" },
         
       ]
     },
@@ -66,29 +72,24 @@ export default function Organising() {
       role: "Women in Engineering Chairs",
       members: [
         { name: "Anwesha Khasnobish", affiliation: "TCS Research, Kolkata, India", image: null },
-        { name: "Nabanita Adhikary", affiliation: "NIT Silchar", image: null },
-        { name: "Saheli Ray", affiliation: "NIT Silchar", image: null },
+        { name: "Nabanita Adhikary", affiliation: "NIT Silchar", image: "/nabanita.jpg" },
+        { name: "Saheli Ray", affiliation: "NIT Silchar", image: "/saheli.jpg" },
       ]
     },
     {
       role: "Industry Interaction Chairs",
       members: [
-        { name: "Amritesh Kumar", affiliation: "NIT Silchar", image: null },
+        { name: "Amritesh Kumar", affiliation: "NIT Silchar", image: "/amritesh.JPG" },
         { name: "Monalisa Pal", affiliation: "Mathworks India Pvt. Ltd", image: null },
         { name: "Sanjay Kar Chowdhury", affiliation: "CESC Pvt Ltd, Kolkata", image: null },
       ]
     },
-    {
-      role: "Finance Chair",
-      members: [
-        { name: "Biswajit Sahoo", affiliation: "NIT Silchar", image: null }
-      ]
-    },
+    
     {
       role: "Website Chairs",
       members: [
-                { name: "Ashish Paramane", affiliation: "NIT Silchar", image: null },
-                { name: "Partha Pakray", affiliation: "NIT Silchar", image: null }
+                { name: "Ashish Paramane", affiliation: "NIT Silchar", image: "/ashish.jpg" },
+                { name: "Partha Pakray", affiliation: "NIT Silchar", image: "/parthapak.png" }
 
 
       ] 
@@ -96,8 +97,8 @@ export default function Organising() {
     {
       role: "Special Sessions/Tutorial Chairs",
       members: [
-      { name: "Debayan Sarkar", affiliation: "NIT Silchar", image: null },
-     { name: "Vivekanandan S.", affiliation: "NIT Silchar", image: null }
+      { name: "Debayan Sarkar", affiliation: "NIT Silchar", image: "/debayan.JPG" },
+     { name: "Vivekanandan S.", affiliation: "NIT Silchar", image: "/vivekanandan.jpg" }
 
 
       ] 

@@ -5,6 +5,7 @@ import MainLayout from "./components/layout/MainLayout";
 import Home from "./pages/Home";
 import Papers from "./pages/authors/Papers";
 import ImportantDates from "./pages/authors/ImportantDates";
+import PaperSubmission from "./pages/authors/paper-submission"; // <-- Imported new component
 import Registration from "./pages/Registration";
 import Organising from './pages/committee/Organising';
 import Advisory from './pages/committee/Advisory';
@@ -12,7 +13,7 @@ import Technical from './pages/committee/Technical';
 import OurSponsors from './pages/sponsors/oursponsors';
 import SponsorshipDetails from './pages/sponsors/SponsorshipDetails';
 import Contact from "./pages/Contact";
-import Reach from "./pages/Reach"; // <-- Imported the new Reach component
+import Reach from "./pages/Reach";
 
 // Helper to scroll to top on route change
 const ScrollToTop = () => {
@@ -47,7 +48,7 @@ export default function App() {
           {/* Authors Section Routes */}
           <Route path="authors/important-dates" element={<ImportantDates />} />
           <Route path="authors/call-for-papers" element={<Papers />} />
-          <Route path="authors/paper-submission" element={<Placeholder title="Paper Submission Engine" />} />
+          <Route path="authors/paper-submission" element={<PaperSubmission />} /> {/* <-- Replaced placeholder */}
           
           <Route path="registration" element={<Registration />} />
           
