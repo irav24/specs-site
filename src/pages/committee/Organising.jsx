@@ -126,7 +126,7 @@ export default function Organising() {
       members: [
                 { name: "Ashish Paramane", affiliation: "NIT Silchar", image: "/ashish.jpg" },
                 { name: "Partha Pakray", affiliation: "NIT Silchar", image: "/parthapak.png" },
-                                { name: "Anupam Biswas", affiliation: "NIT Silchar", image: null },
+                                { name: "Anupam Biswas", affiliation: "NIT Silchar", image: "/anupam.jpg" },
 
                 
 

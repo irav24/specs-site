@@ -6,16 +6,16 @@ export default function Registration() {
   const indianData = [
     { category: "Student", earlyNon: "₹ 6000", earlyIeee: "₹ 5000", regNon: "₹ 7000", regIeee: "₹ 6000" },
     { category: "Academician / Research Scholar", earlyNon: "₹ 12000", earlyIeee: "₹ 10000", regNon: "₹ 13000", regIeee: "₹ 11000" },
-    { category: "Industry Professional", earlyNon: "₹ 18000", earlyIeee: "₹ 15000", regNon: "₹ 19000", regIeee: "₹ 16000" },
+    { category: "Industry Professional", earlyNon: "₹ 15000", earlyIeee: "₹ 12000", regNon: "₹ 16000", regIeee: "₹ 13000" },
     { category: "Attendee", earlyNon: "₹ 5000", earlyIeee: "₹ 4000", regNon: "₹ 6000", regIeee: "₹ 5000" }
   ];
 
   // Data for Foreign Delegates
   const foreignData = [
-    { category: "Student", earlyNon: "$150", earlyIeee: "$100", regNon: "$200", regIeee: "$150" },
-    { category: "Academician / Research Scholar", earlyNon: "$350", earlyIeee: "$250", regNon: "$400", regIeee: "$300" },
+    { category: "Student", earlyNon: "$120", earlyIeee: "$100", regNon: "$170", regIeee: "$150" },
+    { category: "Academician / Research Scholar", earlyNon: "$300", earlyIeee: "$250", regNon: "$350", regIeee: "$300" },
     { category: "Industry Professional", earlyNon: "$500", earlyIeee: "$400", regNon: "$550", regIeee: "$450" },
-    { category: "Attendee", earlyNon: "$150", earlyIeee: "$100", regNon: "$200", regIeee: "$150" }
+    { category: "Attendee", earlyNon: "$100", earlyIeee: "$80", regNon: "$150", regIeee: "$130" }
   ];
 
   // Reusable Table Component to keep code clean and DRY
@@ -44,10 +44,10 @@ export default function Registration() {
                   Category
                 </th>
                 <th colSpan="2" className="py-5 px-4 font-black tracking-widest uppercase text-[#7ed957] border-b border-r border-white/20 text-xs">
-                  Early Bird (Closes 25 Sep 2026)
+                  Early Bird (Closes 10th March 2027)
                 </th>
                 <th colSpan="2" className="py-5 px-4 font-black tracking-widest uppercase text-white border-b border-white/20 text-xs">
-                  Regular Registration (Closes 10 Nov 2026)
+                  Regular Registration (After 10th March 2027)
                 </th>
               </tr>
               {/* Slightly darker blue for the sub-header row to create depth */}
