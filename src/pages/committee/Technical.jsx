@@ -2,30 +2,24 @@ import React from 'react';
 import { User } from 'lucide-react';
 
 export default function Technical() {
-  // Added an 'image' property to each member.
-  // Update these paths to match the images you upload to your 'public' folder.
+  // Only the green highlighted members are included, alphabetized.
   const tpcMembers = [
-    { name: "Akshaya Kumar Pati", affiliation: "KIIT University, Bhubaneswar", image: "" },
-    { name: "Amitava Halder", affiliation: "", image: "" },
+    { name: "Amitava Halder", affiliation: "SurTech, JIS Group", image: "" },
     { name: "Amitkumar V. Jha", affiliation: "KIIT University, Bhubaneswar", image: "/amitkumar.webp" },
     { name: "Anagha Bhattacharya", affiliation: "NIT Mizoram", image: "/anagha.jpeg" },
-    { name: "Anirban Dasgupta", affiliation: "IIT Guwahati", image: "" },
     { name: "Anirudh Nath", affiliation: "IIEST Shibpur", image: "/anirudh.jpeg" },
     { name: "Chandan Kumar", affiliation: "STCT, Pune", image: "" },
     { name: "Debbrota Paul Chowdhury", affiliation: "NIT Silchar", image: "/debbrota.jpg.jpeg" },
-    { name: "Debraj Chakraborty", affiliation: "IIT Bombay", image: "" },
     { name: "Korra Balu", affiliation: "NIT Calicut", image: "/korra.png" },
+    { name: "Manika Saha", affiliation: "NIT Durgapur", image: "" },
     { name: "Mayank Kumar", affiliation: "DTU, Delhi", image: "/mayank.jpg.jpeg" },
     { name: "Nasirul Haque", affiliation: "NIT Calicut", image: "/nasirul.png" },
-    { name: "Pravin Malik", affiliation: "NIT Kurukshetra", image: "" },
-    { name: "R. Murugan", affiliation: "", image: "" },
-    { name: "Ram Krishan", affiliation: "NIT Warangal", image: "" },
-    { name: "Saibal Ghosh", affiliation: "", image: "" },
-    { name: "Sanjib Ganguly", affiliation: "", image: "" },
-    { name: "Sarasij Das", affiliation: "IISc Bengaluru", image: "" },
-    { name: "Sayanjit Singha Roy", affiliation: "", image: "" },
-    { name: "Sayanti Chaudhuri", affiliation: "", image: "" },
-    { name: "Soumya Chatterjee", affiliation: "", image: "" },
+    { name: "R. Murugan", affiliation: "NIT Puducherry", image: "" },
+    { name: "Saibal Ghosh", affiliation: "ISI Kolkata", image: "" },
+    { name: "Sanjib Ganguly", affiliation: "IIT Guwahati", image: "" },
+    { name: "Sayanjit Singha Roy", affiliation: "IIT Kanpur", image: "" },
+    { name: "Sayanti Chaudhuri", affiliation: "Adamas University, Kolkata", image: "" },
+    { name: "Soumya Chatterjee", affiliation: "NIT Durgapur", image: "" },
     { name: "Sourav Das", affiliation: "IEM Kolkata", image: "/sourab das.jpg.jpeg" },
     { name: "Subhash Mondal", affiliation: "", image: "/subhas_mandal.jfif.jpeg" },
     { name: "Sudipta Chakraborty", affiliation: "NIT Silchar", image: "/sudipta.jfif.jpeg" },
@@ -44,7 +38,9 @@ export default function Technical() {
             Technical Program Committee
           </h1>
           <div className="w-24 h-1.5 bg-[#7ed957] mx-auto rounded-full mb-6"></div>
-          
+          <p className="text-slate-600 text-lg font-medium max-w-2xl mx-auto leading-relaxed">
+            The distinguished experts responsible for the peer-review process and technical program curation for IEEE SPeCS 2027.
+          </p>
         </div>
 
         {/* Dynamic List Rendering */}

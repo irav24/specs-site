@@ -7,7 +7,8 @@ export default function Registration() {
     { category: "Student (UG/PG/Ph.D.)", earlyNon: "₹ 6500", earlyIeee: "₹ 6000", regNon: "₹ 7500", regIeee: "₹ 7000" },
     { category: "Academia", earlyNon: "₹ 9000", earlyIeee: "₹ 8000", regNon: "₹ 10000", regIeee: "₹ 9000" },
     { category: "Industry Professional", earlyNon: "₹ 20000", earlyIeee: "₹ 18000", regNon: "₹ 21000", regIeee: "₹ 19000" },
-    { category: "Attendee", earlyNon: "₹ 5500", earlyIeee: "₹ 5000", regNon: "₹ 6500", regIeee: "₹ 6000" }
+    { category: "Attendee", earlyNon: "₹ 5500", earlyIeee: "₹ 5000", regNon: "₹ 6500", regIeee: "₹ 6000" },
+    { category: "Additional Page", earlyNon: "₹ 1000/page", earlyIeee: "₹ 1000/page", regNon: "₹ 1000/page", regIeee: "₹ 1000/page" } // <-- New Row Added
   ];
 
   // Data for Foreign Delegates
@@ -15,7 +16,8 @@ export default function Registration() {
     { category: "Student (UG/PG/Ph.D.)", earlyNon: "$250", earlyIeee: "$200", regNon: "$300", regIeee: "$250" },
     { category: "Academician / Research Scholar", earlyNon: "$350", earlyIeee: "$300", regNon: "$400", regIeee: "$350" },
     { category: "Industry Professional", earlyNon: "$450", earlyIeee: "$400", regNon: "$500", regIeee: "$450" },
-    { category: "Attendee", earlyNon: "$200", earlyIeee: "$150", regNon: "$250", regIeee: "$200" }
+    { category: "Attendee", earlyNon: "$200", earlyIeee: "$150", regNon: "$250", regIeee: "$200" },
+    { category: "Additional Page", earlyNon: "$50/page", earlyIeee: "$50/page", regNon: "$50/page", regIeee: "$50/page" } // <-- New Row Added
   ];
 
   // Reusable Table Component to keep code clean and DRY
@@ -119,14 +121,16 @@ export default function Registration() {
           data={foreignData} 
         />
 
-        {/* Three Bullet Points Added Below the Tables */}
+        {/* Notes Added Below the Tables */}
         <div className="max-w-4xl mx-auto mt-4 bg-white rounded-2xl border border-slate-200 shadow-sm p-8 border-l-4 border-l-[#0057b2]">
           <h3 className="font-serif text-xl font-bold text-slate-900 mb-5 border-b border-slate-100 pb-3">
-            Important Registration Notes
+            Notes
           </h3>
           <ul className="space-y-4 text-slate-600 font-medium list-disc list-outside ml-6 marker:text-[#7ed957]">
-            <li>For IEEE SPS members, a discount of 1000 INR will be applied on registration fee.</li>
-            <li>For additional papers by the same registering author, a discount of 50% will be given on the second paper.</li>
+            <li>Registration fees are exclusive of 18% GST and payment gateway charges.</li>
+                        <li>In case of student registration, registering author must be student with valid ID proof.</li>
+                        
+
             <li>Attendee registration covers participation in all sessions.</li>
           </ul>
         </div>

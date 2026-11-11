@@ -1,6 +1,6 @@
 import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'; // 1. Import Plugin
+import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'; 
 import { MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -8,27 +8,27 @@ const destinations = [
   {
     title: "NIT Silchar Campus",
     desc: "A breathtaking 600-acre lush green campus featuring modern infrastructure and serene lakes.",
-    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=800", 
+    image: "/nits.jpeg", // Update with your actual filename in the public folder
   },
   {
     title: "Central Library",
     desc: "One of the largest digital libraries in Asia, serving as the academic heart of the institute.",
-    image: "https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&q=80&w=800",
+    image: "/library.jpg", // Update with your actual filename in the public folder
   },
   {
     title: "Assam Tea Gardens",
     desc: "Experience the iconic, sprawling tea estates that define the landscape of the Barak Valley.",
-    image: "https://images.unsplash.com/photo-1581404176461-8eb13e00fc96?auto=format&fit=crop&q=80&w=800",
+    image: "/teag.jpeg", // Update with your actual filename in the public folder
   },
   {
-    title: "Bhuban Mahadev Temple",
-    desc: "A historic and spiritually significant site situated on the Bhuban Hill.",
-    image: "https://images.unsplash.com/photo-1621831825102-1cb66a33cb8e?auto=format&fit=crop&q=80&w=800",
+    title: "Kachakanti Temple",
+    desc: "Kachakanti Mandir in Silchar is a Hindu temple dedicated to the Dimasa Kachari Mother Goddess “Kachakanti”. It is one of the oldest temples of Cachar district.",
+    image: "/kachakanti.jpeg", // Update with your actual filename in the public folder
   },
   {
     title: "Khaspur Ruins",
     desc: "Explore the ancient ruins of the Dimasa Kachari Kingdom, just a short drive from the city.",
-    image: "https://images.unsplash.com/photo-1605649487212-4d4b1a43a290?auto=format&fit=crop&q=80&w=800",
+    image: "/khaspur.jpeg", // Update with your actual filename in the public folder
   }
 ];
 
@@ -66,8 +66,12 @@ export default function ExploreCarousel() {
         <div className="embla__container flex cursor-grab active:cursor-grabbing">
           {destinations.map((dest, index) => (
             <div key={index} className="embla__slide flex-[0_0_85%] sm:flex-[0_0_45%] md:flex-[0_0_30%] min-w-0 pl-4 relative group">
-              <div className="relative h-[340px] w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200">
-                <img src={dest.image} alt={dest.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div className="relative h-[340px] w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-100">
+                {dest.image ? (
+                  <img src={dest.image} alt={dest.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center text-slate-400 font-medium">Image Placeholder</div>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#002b5e] via-[#0057b2]/40 to-transparent" />
                 
                 <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
