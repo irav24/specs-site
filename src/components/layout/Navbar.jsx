@@ -12,7 +12,7 @@ export default function Navbar() {
     {
       label: "Committee", path: "/committee/organising",
       children: [
-        { label: "Organising Committee", path: "/committee/organising" }, 
+        { label: "Organizing Committee", path: "/committee/organising" }, 
         { label: "Advisory Committee", path: "/committee/advisory" },
         { label: "Technical Program Committee", path: "/committee/technical" }
       ]
@@ -74,13 +74,42 @@ export default function Navbar() {
       `}</style>
 
       {/* Moving Ticker Bar */}
+   {/* Seamless Marquee Animation Styles */}
+      <style>{`
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+          /* Increased from 25s to 60s to lower the speed significantly */
+          animation: scroll 60s linear infinite;
+          display: flex;
+          width: max-content;
+        }
+        .animate-scroll:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+
+      {/* Moving Ticker Bar */}
       <div className="w-full bg-[#0057b2] text-white py-2 md:py-2.5 overflow-hidden border-b border-white/20">
         <div className="animate-scroll">
           {[...Array(6)].map((_, i) => (
             <div key={i} className="flex items-center gap-6 md:gap-8 px-4 md:px-8 whitespace-nowrap text-[10px] sm:text-[11px] md:text-xs font-mono font-medium">
               <span className="text-white/40">|</span>
-              <span>Venue: NIT Silchar </span>
-              <span className="text-[#7ed957] font-bold tracking-widest ml-1 md:ml-2">REC: #73917</span>
+              
+              <span>Paper Submission Starts: 10th November 2026</span>
+              <span className="text-[#7ed957]">•</span>
+              <span>Paper Submission Deadline: 15th January 2027</span>
+              <span className="text-[#7ed957]">•</span>
+              <span>Paper Acceptance Notification: 20th February 2027</span>
+              <span className="text-[#7ed957]">•</span>
+              <span>Author Registration: 10th March 2027</span>
+              <span className="text-[#7ed957]">•</span>
+              <span>Camera Ready Submission: 20th March 2027</span>
+              <span className="text-[#7ed957]">•</span>
+              <span>Venue: NIT Silchar</span>
+              
             </div>
           ))}
         </div>

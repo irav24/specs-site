@@ -17,7 +17,7 @@ export default function Organising() {
       ]
     },
     {
-      role: "Honorary Chairs",
+      role: "Honorary General Chair",
       members: [
         
         { name: "Subhas C. Mukhopadhyay", affiliation: "Macquarie University", image: null },
@@ -54,6 +54,19 @@ export default function Organising() {
       ]
     },
     {
+      role: "Program Chairs",
+      members: [
+        { name: "Arup Kumar Goswami", affiliation: "NIT Silchar", image: "/akg.jpg" },
+        { name: "Jyoti Prakash Mishra", affiliation: "NIT Silchar", image: "/jpm.jpg" },
+                { name: "Lalit Chandra Saikia", affiliation: "NIT Silchar", image: "/lcs.jpg" },
+
+
+
+
+        
+      ]
+    },
+    {
       role: "Publication Chairs",
       members: [
         { name: "Avadh Pati", affiliation: "NIT Silchar", image: "/avadh.jpg" },
@@ -74,6 +87,7 @@ export default function Organising() {
     {
       role: "Special Sessions/Tutorial Chairs",
       members: [
+        { name: "Ambrish Devanshu", affiliation: "NIT Silchar", image: "/ambrish.jpeg" },
       { name: "Debayan Sarkar", affiliation: "NIT Silchar", image: "/debayan.JPG" },
      { name: "Vivekanandan S.", affiliation: "NIT Silchar", image: "/vivekanandan.jpg" }
 
@@ -89,14 +103,7 @@ export default function Organising() {
        
       ]
     },
-    {
-      role: "Industry Interaction Chairs",
-      members: [
-        { name: "Amritesh Kumar", affiliation: "NIT Silchar", image: "/amritesh.JPG" },
-        { name: "Monalisa Pal", affiliation: "Mathworks India Pvt. Ltd", image: null },
-        { name: "Sanjay Kar Chowdhury", affiliation: "CESC Pvt Ltd, Kolkata", image: null },
-      ]
-    },
+  
     
     
     {
@@ -136,7 +143,7 @@ export default function Organising() {
     {
       role: "Student Activity Chairs",
       members: [
-        { name: "Ambrish Devanshu", affiliation: "NIT Silchar", image: "/ambrish.jpeg" },
+        
       ] 
     },
     
@@ -153,12 +160,10 @@ export default function Organising() {
         {/* Unified Page Header */}
         <div className="text-center mb-16">
           <h1 className="font-serif text-4xl md:text-5xl font-extrabold text-[#0057b2] mb-5 tracking-tight">
-            Organising Committee
+            Organizing Committee
           </h1>
           <div className="w-24 h-1.5 bg-[#7ed957] mx-auto rounded-full mb-6"></div>
-          <p className="text-slate-600 text-lg font-medium max-w-2xl mx-auto leading-relaxed">
-            The leadership and operational body for the 2027 IEEE International Conference on Signal, Power & Computing Systems.
-          </p>
+          
         </div>
 
         {/* Committee Sections */}

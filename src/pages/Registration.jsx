@@ -4,15 +4,15 @@ export default function Registration() {
   
   // Data for Indian Delegates
   const indianData = [
-    { category: "Student", earlyNon: "₹ 6000", earlyIeee: "₹ 5000", regNon: "₹ 7000", regIeee: "₹ 6000" },
-    { category: "Academician / Research Scholar", earlyNon: "₹ 12000", earlyIeee: "₹ 10000", regNon: "₹ 13000", regIeee: "₹ 11000" },
-    { category: "Industry Professional", earlyNon: "₹ 15000", earlyIeee: "₹ 12000", regNon: "₹ 16000", regIeee: "₹ 13000" },
-    { category: "Attendee", earlyNon: "₹ 5000", earlyIeee: "₹ 4000", regNon: "₹ 6000", regIeee: "₹ 5000" }
+    { category: "Student (UG/PG/Ph.D.)", earlyNon: "₹ 6500", earlyIeee: "₹ 6000", regNon: "₹ 7500", regIeee: "₹ 7000" },
+    { category: "Academia", earlyNon: "₹ 10000", earlyIeee: "₹ 9000", regNon: "₹ 11000", regIeee: "₹ 10000" },
+    { category: "Industry Professional", earlyNon: "₹ 20000", earlyIeee: "₹ 18000", regNon: "₹ 22000", regIeee: "₹ 20000" },
+    { category: "Attendee", earlyNon: "₹ 6000", earlyIeee: "₹ 5000", regNon: "₹ 7000", regIeee: "₹ 6000" }
   ];
 
   // Data for Foreign Delegates
   const foreignData = [
-    { category: "Student", earlyNon: "$120", earlyIeee: "$100", regNon: "$170", regIeee: "$150" },
+    { category: "Student (UG/PG/Ph.D.)", earlyNon: "$120", earlyIeee: "$100", regNon: "$170", regIeee: "$150" },
     { category: "Academician / Research Scholar", earlyNon: "$300", earlyIeee: "$250", regNon: "$350", regIeee: "$300" },
     { category: "Industry Professional", earlyNon: "$500", earlyIeee: "$400", regNon: "$550", regIeee: "$450" },
     { category: "Attendee", earlyNon: "$100", earlyIeee: "$80", regNon: "$150", regIeee: "$130" }
@@ -59,8 +59,8 @@ export default function Registration() {
               </tr>
             </thead>
 
-            {/* Table Body */}
-            <tbody className="text-sm font-bold uppercase tracking-wider text-slate-700">
+            {/* Table Body - Removed 'uppercase tracking-wider' classes here */}
+            <tbody className="text-sm font-bold text-slate-700">
               {data.map((row, idx) => (
                 <tr 
                   key={idx} 
@@ -73,13 +73,13 @@ export default function Registration() {
                   <td className="py-6 px-4 font-black text-[#0057b2] border-r border-slate-100 text-base">
                     {row.earlyIeee}
                   </td>
-                  <td className="py-6 px-4 border-r border-slate-100">
+                  <td className="py-6 px-4 font-black text-[#555555] border-r border-slate-100 text-base">
                     {row.earlyNon}
                   </td>
                   <td className="py-6 px-4 font-black text-[#0057b2] border-r border-slate-100 text-base">
                     {row.regIeee}
                   </td>
-                  <td className="py-6 px-4">
+                  <td className="py-6 px-4 font-black text-[#555555] border-r border-slate-100 text-base">
                     {row.regNon}
                   </td>
                   
@@ -97,7 +97,7 @@ export default function Registration() {
     <div className="bg-slate-50 min-h-screen py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Unified Page Header - Cleaned up to remove the paragraph gap */}
+        {/* Unified Page Header */}
         <div className="text-center mb-16 md:mb-20">
           <h1 className="font-serif text-4xl md:text-5xl font-extrabold text-[#0057b2] mb-5 tracking-tight">
             Registration Fees
@@ -125,12 +125,9 @@ export default function Registration() {
             Important Registration Notes
           </h3>
           <ul className="space-y-4 text-slate-600 font-medium list-disc list-outside ml-6 marker:text-[#7ed957]">
-            <li>
-Student registration allows for a single paper.            </li>
-            <li>
-Academia registration allows for a maximum of two papers.            </li>
-            <li>
-Attendee registration allows all three days.            </li>
+            <li>For IEEE SPS members, a discount of 1000 INR will be applied on registration fee.</li>
+            <li>For additional papers by the same registering author, a discount of 50% will be given on the second paper.</li>
+            <li>Attendee registration covers participation in all sessions.</li>
           </ul>
         </div>
 

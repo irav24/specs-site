@@ -6,7 +6,7 @@ export default function ImportantDates() {
     {
       id: 1,
       title: "Paper Submission Starts",
-      date: "November 5, 2026",
+      date: "November 10, 2026",
       
       icon: <FileText className="w-6 h-6 text-white" />,
       color: "bg-[#0057b2]",
@@ -16,7 +16,7 @@ export default function ImportantDates() {
     {
       id: 2,
       title: "Paper Submission Deadline",
-      date: "January 20, 2027",
+      date: "January 15, 2027",
       
       icon: <Clock className="w-6 h-6 text-white" />,
       color: "bg-[#0057b2]",
@@ -26,7 +26,7 @@ export default function ImportantDates() {
     {
       id: 3,
       title: "Paper Acceptance Notification",
-      date: "February 28, 2027",
+      date: "February 20, 2027",
       icon: <CheckCircle2 className="w-6 h-6 text-white" />,
       color: "bg-[#0057b2]",
             isHighlight: true
@@ -44,7 +44,7 @@ export default function ImportantDates() {
     {
       id: 5,
       title: "Camera Ready Submission",
-      date: "March 31, 2027",
+      date: "March 20, 2027",
       icon: <Upload className="w-6 h-6 text-white" />,
       color: "bg-[#0057b2]",
             isHighlight: true
@@ -70,9 +70,7 @@ export default function ImportantDates() {
             Important Dates
           </h1>
           <div className="w-24 h-1.5 bg-[#7ed957] mx-auto rounded-full mb-6"></div>
-          <p className="text-slate-600 text-lg font-medium max-w-2xl mx-auto leading-relaxed">
-            Mark your calendars for these critical milestones leading up to IEEE SPeCS 2027.
-          </p>
+          
         </div>
 
         {/* Timeline Container */}
