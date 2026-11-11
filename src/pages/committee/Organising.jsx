@@ -98,9 +98,9 @@ export default function Organising() {
       members: [
                 { name: "Amritesh Kumar", affiliation: "NIT Silchar", image: "/amritesh.JPG" },
 
-        { name: "Biswajit Chakraborty", affiliation: "Megger India Pvt. Ltd", image: null },
+        { name: "Biswajit Chakraborty", affiliation: "Megger India Pvt. Ltd", image: "/bisawjit.jpeg" },
         { name: "Chayan Bhattacharjee", affiliation: "NIT Silchar", image: "/chayan.jpg" },
-        { name: "Monalisa Pal", affiliation: "Mathworks India Pvt. Ltd.", image: null },
+        { name: "Monalisa Pal", affiliation: "Mathworks India Pvt. Ltd.", image: "/monalisa.jpeg" },
         { name: "Ranjay Hazra", affiliation: "NIT Silchar", image: "/ranjay.jpg" }
       ] 
     },
