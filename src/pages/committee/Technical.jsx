@@ -1,24 +1,37 @@
 import React from 'react';
+import { User } from 'lucide-react';
 
 export default function Technical() {
+  // Added an 'image' property to each member.
+  // Update these paths to match the images you upload to your 'public' folder.
   const tpcMembers = [
-    { name: "Akshaya Kumar Pati", affiliation: "KIIT University, Bhubaneswar" },
-    { name: "Amitkumar V. Jha", affiliation: "KIIT University, Bhubaneswar" },
-    { name: "Anagha Bhattacharya", affiliation: "NIT Mizoram" },
-    { name: "Anirban Dasgupta", affiliation: "IIT Guwahati" },
-    { name: "Anirudh Nath", affiliation: "IIEST Shibpur" },
-    { name: "Chandan Kumar", affiliation: "STCT, Pune" },
-    { name: "Debraj Chakraborty", affiliation: "IIT Bombay" },
-    { name: "Korra Balu", affiliation: "NIT Calicut" },
-    { name: "Mayank Kumar", affiliation: "DTU, Delhi" },
-    { name: "Nasirul Haque", affiliation: "NIT Calicut" },
-    { name: "Pravin Malik", affiliation: "NIT Kurukshetra" },
-    { name: "Ram Krishan", affiliation: "NIT Warangal" },
-    { name: "Sarasij Das", affiliation: "IISc Bengaluru" },
-    { name: "Sourav Das", affiliation: "IEM Kolkata" },
-    { name: "Sudipta Chakraborty", affiliation: "NIT Silchar" },
-    { name: "Sumit Chatterjee", affiliation: "IIT Delhi" },
-    { name: "Supratim Gupta", affiliation: "NIT Rourkela" }
+    { name: "Akshaya Kumar Pati", affiliation: "KIIT University, Bhubaneswar", image: "" },
+    { name: "Amitava Halder", affiliation: "", image: "" },
+    { name: "Amitkumar V. Jha", affiliation: "KIIT University, Bhubaneswar", image: "/amitkumar.webp" },
+    { name: "Anagha Bhattacharya", affiliation: "NIT Mizoram", image: "/anagha.jpeg" },
+    { name: "Anirban Dasgupta", affiliation: "IIT Guwahati", image: "" },
+    { name: "Anirudh Nath", affiliation: "IIEST Shibpur", image: "/anirudh.jpeg" },
+    { name: "Chandan Kumar", affiliation: "STCT, Pune", image: "" },
+    { name: "Debbrota Paul Chowdhury", affiliation: "NIT Silchar", image: "/debbrota.jpg.jpeg" },
+    { name: "Debraj Chakraborty", affiliation: "IIT Bombay", image: "" },
+    { name: "Korra Balu", affiliation: "NIT Calicut", image: "/korra.png" },
+    { name: "Mayank Kumar", affiliation: "DTU, Delhi", image: "/mayank.jpg.jpeg" },
+    { name: "Nasirul Haque", affiliation: "NIT Calicut", image: "/nasirul.png" },
+    { name: "Pravin Malik", affiliation: "NIT Kurukshetra", image: "" },
+    { name: "R. Murugan", affiliation: "", image: "" },
+    { name: "Ram Krishan", affiliation: "NIT Warangal", image: "" },
+    { name: "Saibal Ghosh", affiliation: "", image: "" },
+    { name: "Sanjib Ganguly", affiliation: "", image: "" },
+    { name: "Sarasij Das", affiliation: "IISc Bengaluru", image: "" },
+    { name: "Sayanjit Singha Roy", affiliation: "", image: "" },
+    { name: "Sayanti Chaudhuri", affiliation: "", image: "" },
+    { name: "Soumya Chatterjee", affiliation: "", image: "" },
+    { name: "Sourav Das", affiliation: "IEM Kolkata", image: "/sourab das.jpg.jpeg" },
+    { name: "Subhash Mondal", affiliation: "", image: "/subhas_mandal.jfif.jpeg" },
+    { name: "Sudipta Chakraborty", affiliation: "NIT Silchar", image: "/sudipta.jfif.jpeg" },
+    { name: "Sumit K Chattopadhyay", affiliation: "IIT Delhi", image: "/sumit_k.jpg.jpeg" },
+    { name: "Supratim Gupta", affiliation: "NIT Rourkela", image: "/supratim.jpg.jpeg" },
+    { name: "Tripti Goel", affiliation: "NIT Silchar", image: "/Tripti_Goel.jpg.jpeg" }
   ];
 
   return (
@@ -31,22 +44,47 @@ export default function Technical() {
             Technical Program Committee
           </h1>
           <div className="w-24 h-1.5 bg-[#7ed957] mx-auto rounded-full mb-6"></div>
-          <p className="text-slate-600 text-lg font-medium max-w-2xl mx-auto leading-relaxed">
-            The distinguished experts responsible for the peer-review process and technical program curation for IEEE SPeCS 2027.
-          </p>
+          
         </div>
 
         {/* Dynamic List Rendering */}
         {tpcMembers.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {tpcMembers.map((member, idx) => (
-              <div key={idx} className="bg-white border-l-4 border-[#0057b2] hover:border-[#7ed957] p-6 rounded-r-xl shadow-sm hover:shadow-md transition-all group flex flex-col h-full">
-                <h3 className="font-serif font-bold text-lg text-slate-900 group-hover:text-[#0057b2] transition-colors leading-snug">
+              <div 
+                key={idx} 
+                className="bg-white border-t-4 border-[#0057b2] hover:border-[#7ed957] p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col items-center text-center h-full"
+              >
+                
+                {/* Profile Image Container */}
+                <div className="w-24 h-24 mb-5 rounded-full overflow-hidden border-4 border-slate-50 shadow-sm group-hover:border-[#7ed957]/20 transition-colors bg-slate-100 flex items-center justify-center shrink-0">
+                  {member.image ? (
+                    <img 
+                      src={member.image} 
+                      alt={member.name} 
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        // Fallback if the image link is broken
+                        e.target.style.display = 'none';
+                        e.target.nextSibling.style.display = 'flex';
+                      }}
+                    />
+                  ) : null}
+                  
+                  {/* Fallback Icon if no image is provided or if image fails to load */}
+                  <div className={`w-full h-full flex items-center justify-center text-[#0057b2]/40 ${member.image ? 'hidden' : 'flex'}`}>
+                    <User className="w-10 h-10" />
+                  </div>
+                </div>
+
+                {/* Member Details */}
+                <h3 className="font-serif font-bold text-lg text-slate-900 group-hover:text-[#0057b2] transition-colors leading-snug mb-2">
                   {member.name}
                 </h3>
-                <p className="text-sm text-slate-600 font-medium mt-1.5 flex-grow">
+                <p className="text-sm text-slate-600 font-medium flex-grow">
                   {member.affiliation}
                 </p>
+                
               </div>
             ))}
           </div>

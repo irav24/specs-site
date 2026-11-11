@@ -5,17 +5,17 @@ export default function Registration() {
   // Data for Indian Delegates
   const indianData = [
     { category: "Student (UG/PG/Ph.D.)", earlyNon: "₹ 6500", earlyIeee: "₹ 6000", regNon: "₹ 7500", regIeee: "₹ 7000" },
-    { category: "Academia", earlyNon: "₹ 10000", earlyIeee: "₹ 9000", regNon: "₹ 11000", regIeee: "₹ 10000" },
-    { category: "Industry Professional", earlyNon: "₹ 20000", earlyIeee: "₹ 18000", regNon: "₹ 22000", regIeee: "₹ 20000" },
-    { category: "Attendee", earlyNon: "₹ 6000", earlyIeee: "₹ 5000", regNon: "₹ 7000", regIeee: "₹ 6000" }
+    { category: "Academia", earlyNon: "₹ 9000", earlyIeee: "₹ 8000", regNon: "₹ 10000", regIeee: "₹ 9000" },
+    { category: "Industry Professional", earlyNon: "₹ 20000", earlyIeee: "₹ 18000", regNon: "₹ 21000", regIeee: "₹ 19000" },
+    { category: "Attendee", earlyNon: "₹ 5500", earlyIeee: "₹ 5000", regNon: "₹ 6500", regIeee: "₹ 6000" }
   ];
 
   // Data for Foreign Delegates
   const foreignData = [
-    { category: "Student (UG/PG/Ph.D.)", earlyNon: "$120", earlyIeee: "$100", regNon: "$170", regIeee: "$150" },
-    { category: "Academician / Research Scholar", earlyNon: "$300", earlyIeee: "$250", regNon: "$350", regIeee: "$300" },
-    { category: "Industry Professional", earlyNon: "$500", earlyIeee: "$400", regNon: "$550", regIeee: "$450" },
-    { category: "Attendee", earlyNon: "$100", earlyIeee: "$80", regNon: "$150", regIeee: "$130" }
+    { category: "Student (UG/PG/Ph.D.)", earlyNon: "$250", earlyIeee: "$200", regNon: "$300", regIeee: "$250" },
+    { category: "Academician / Research Scholar", earlyNon: "$350", earlyIeee: "$300", regNon: "$400", regIeee: "$350" },
+    { category: "Industry Professional", earlyNon: "$450", earlyIeee: "$400", regNon: "$500", regIeee: "$450" },
+    { category: "Attendee", earlyNon: "$200", earlyIeee: "$150", regNon: "$250", regIeee: "$200" }
   ];
 
   // Reusable Table Component to keep code clean and DRY

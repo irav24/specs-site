@@ -97,12 +97,12 @@ export default function CallForPapers() {
 
   // Data for the horizontal timeline line diagram
   const timelineDates = [
-    { id: 1, title: "Submission Opens", date: "5th November 2026" },
-    { id: 2, title: "Submission Closes", date: "20th January 2027" },
-    { id: 3, title: "Acceptance Notification", date: "28th February 2027" },
+    { id: 1, title: "Submission Opens", date: "10th November 2026" },
+    { id: 2, title: "Submission Closes", date: "15th January 2027" },
+    { id: 3, title: "Acceptance Notification", date: "20th February 2027" },
         { id: 4, title: "Author Registration", date: "10th March 2027" },
 
-    { id: 4, title: "Camera-Ready Submission", date: "31st March 2027" },
+    { id: 4, title: "Camera-Ready Submission", date: "20th March 2027" },
     
     { id: 8, title: "Conference Dates", date: "24 – 26 May 2027" }
   ];
