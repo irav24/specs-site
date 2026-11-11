@@ -62,16 +62,18 @@ export default function Home() {
 
           
           <p className="text-slate-200 text-lg md:text-xl max-w-3xl mx-auto font-medium leading-relaxed mb-12 drop-shadow-md">
-            The premier technical venue bridging foundational research with applied engineering paradigms.
+            Department of Electrical Engineering
+             National Institute of Technology, 
+             Silchar, Assam, India.
           </p>
           
           {/* High Contrast Actions */}
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a href="https://cmt3.research.microsoft.com" target="_blank" rel="noreferrer" className="px-8 py-4 bg-[#0057b2] border border-[#0057b2] text-white text-sm font-bold uppercase tracking-widest hover:bg-[#004185] hover:border-[#004185] transition-all rounded-lg shadow-xl flex items-center justify-center gap-2">
-              Submit Manuscript <ExternalLink className="w-4 h-4 text-[#7ed957]" />
+              Call for Papers<ExternalLink className="w-4 h-4 text-[#7ed957]" />
             </a>
             <button className="px-8 py-4 bg-transparent text-white border-2 border-white/30 text-sm font-bold uppercase tracking-widest hover:border-white hover:bg-white/10 transition-colors rounded-lg backdrop-blur-sm">
-              Registration Portal
+              Submit Manuscript
             </button>
           </div>
         </div>

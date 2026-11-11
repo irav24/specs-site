@@ -21,7 +21,6 @@ export default function Technical() {
     { name: "Sayanti Chaudhuri", affiliation: "Adamas University, Kolkata", image: "" },
     { name: "Soumya Chatterjee", affiliation: "NIT Durgapur", image: "" },
     { name: "Sourav Das", affiliation: "IEM Kolkata", image: "/sourab das.jpg.jpeg" },
-    { name: "Subhash Mondal", affiliation: "", image: "/subhas_mandal.jfif.jpeg" },
     { name: "Sudipta Chakraborty", affiliation: "NIT Silchar", image: "/sudipta.jfif.jpeg" },
     { name: "Sumit K Chattopadhyay", affiliation: "IIT Delhi", image: "/sumit_k.jpg.jpeg" },
     { name: "Supratim Gupta", affiliation: "NIT Rourkela", image: "/supratim.jpg.jpeg" },
@@ -38,9 +37,7 @@ export default function Technical() {
             Technical Program Committee
           </h1>
           <div className="w-24 h-1.5 bg-[#7ed957] mx-auto rounded-full mb-6"></div>
-          <p className="text-slate-600 text-lg font-medium max-w-2xl mx-auto leading-relaxed">
-            The distinguished experts responsible for the peer-review process and technical program curation for IEEE SPeCS 2027.
-          </p>
+          
         </div>
 
         {/* Dynamic List Rendering */}

@@ -124,7 +124,7 @@ export default function Registration() {
         {/* Notes Added Below the Tables */}
         <div className="max-w-4xl mx-auto mt-4 bg-white rounded-2xl border border-slate-200 shadow-sm p-8 border-l-4 border-l-[#0057b2]">
           <h3 className="font-serif text-xl font-bold text-slate-900 mb-5 border-b border-slate-100 pb-3">
-            Notes
+            Important Notes
           </h3>
           <ul className="space-y-4 text-slate-600 font-medium list-disc list-outside ml-6 marker:text-[#7ed957]">
             <li>Registration fees are exclusive of 18% GST and payment gateway charges.</li>

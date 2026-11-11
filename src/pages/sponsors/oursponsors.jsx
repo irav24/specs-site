@@ -4,8 +4,8 @@ export default function OurSponsors() {
   
   // 1. Technical Co-Sponsors Array
   const technicalSponsors = [
-    { name: "Signal Processing Society, Kolkata Subsection", logo: "/Sponsor.png", tier: "Technical Co-Sponsor" },
-    { name: "Silchar Subsection", logo: "/sponsor2.jpeg", tier: "Technical Co-Sponsor" },
+    { name: "Signal Processing Society, Kolkata Subsection", logo: "/Sponsor.png" },
+    { name: "Silchar Subsection", logo: "/sponsor2.jpeg" },
     // ADD NEW TECHNICAL SPONSORS HERE:
     // { name: "Example Name", logo: "/example.png", tier: "Technical Co-Sponsor", sizeClass: "scale-110" },
   ];
@@ -15,7 +15,7 @@ export default function OurSponsors() {
     { 
       name: "Sponsor 1", 
       logo: "/Sponsor.png", 
-      tier: "Financial Sponsor", 
+      
       // Using scale-150 to specifically make this logo much bigger
       sizeClass: "scale-150" 
     },
@@ -86,7 +86,7 @@ export default function OurSponsors() {
           {/* Right Column: Financial Sponsors */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center border-b-2 border-slate-100 pb-4">
-              Financial Sponsors
+              Financial Sponsor
             </h2>
             {financialSponsors.length > 0 ? (
               <div className={`grid grid-cols-1 gap-6 ${financialSponsors.length === 1 ? 'max-w-sm mx-auto' : 'sm:grid-cols-2'}`}>

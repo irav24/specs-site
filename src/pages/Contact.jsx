@@ -1,7 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 export default function Contact() {
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setStatus("Sending...");
+    
+    const formData = new FormData(event.target);
+    
+    // Replace with your actual Web3Forms access key
+    formData.append("access_key", "486ae1a4-3b4e-4005-b759-3db30e3f9ebf");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus("Message sent successfully!");
+        event.target.reset();
+      } else {
+        setStatus("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setStatus("Error sending message. Please try again later.");
+    }
+  };
+
   return (
     <div className="bg-slate-50 min-h-screen py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,7 +56,7 @@ export default function Contact() {
               For all inquiries related to paper submission, registration, conference program, or general information, please contact the IEEE SPeCS 2027 organizing team.
             </p>
 
-            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-5" onSubmit={handleSubmit}>
               
               {/* Full Name */}
               <div className="flex flex-col gap-1.5">
@@ -35,6 +65,7 @@ export default function Contact() {
                 </label>
                 <input 
                   type="text" 
+                  name="name"
                   placeholder="First Middle Last" 
                   className="w-full border border-slate-300 rounded-lg p-3 text-sm text-slate-700 focus:outline-none focus:border-[#0057b2] focus:ring-1 focus:ring-[#0057b2] transition-shadow placeholder:text-slate-400"
                   required
@@ -48,6 +79,7 @@ export default function Contact() {
                 </label>
                 <input 
                   type="text" 
+                  name="organization"
                   placeholder="Institute / Industry / Start-up / R&D" 
                   className="w-full border border-slate-300 rounded-lg p-3 text-sm text-slate-700 focus:outline-none focus:border-[#0057b2] focus:ring-1 focus:ring-[#0057b2] transition-shadow placeholder:text-slate-400"
                   required
@@ -61,6 +93,7 @@ export default function Contact() {
                 </label>
                 <input 
                   type="email" 
+                  name="email"
                   placeholder="your@email.com" 
                   className="w-full border border-slate-300 rounded-lg p-3 text-sm text-slate-700 focus:outline-none focus:border-[#0057b2] focus:ring-1 focus:ring-[#0057b2] transition-shadow placeholder:text-slate-400"
                   required
@@ -74,6 +107,7 @@ export default function Contact() {
                 </label>
                 <input 
                   type="tel" 
+                  name="phone"
                   placeholder="Mobile Number" 
                   className="w-full border border-slate-300 rounded-lg p-3 text-sm text-slate-700 focus:outline-none focus:border-[#0057b2] focus:ring-1 focus:ring-[#0057b2] transition-shadow placeholder:text-slate-400"
                   required
@@ -86,6 +120,7 @@ export default function Contact() {
                   Message <span className="text-red-500">*</span>
                 </label>
                 <textarea 
+                  name="message"
                   rows="4"
                   placeholder="Write your message here..." 
                   className="w-full border border-slate-300 rounded-lg p-3 text-sm text-slate-700 focus:outline-none focus:border-[#0057b2] focus:ring-1 focus:ring-[#0057b2] transition-shadow placeholder:text-slate-400 resize-y"
@@ -93,14 +128,22 @@ export default function Contact() {
                 ></textarea>
               </div>
 
-              {/* Submit Button */}
-              <button 
-                type="submit" 
-                className="mt-4 flex items-center justify-center gap-2 w-full sm:w-auto bg-[#0057b2] text-white px-8 py-3.5 rounded-lg font-bold tracking-wide hover:bg-[#004185] hover:shadow-md hover:shadow-[#0057b2]/20 transition-all active:scale-[0.98]"
-              >
-                Send Message
-                <Send className="w-4 h-4" />
-              </button>
+              {/* Submit Button & Status Message */}
+              <div className="mt-4">
+                <button 
+                  type="submit" 
+                  className="flex items-center justify-center gap-2 w-full sm:w-auto bg-[#0057b2] text-white px-8 py-3.5 rounded-lg font-bold tracking-wide hover:bg-[#004185] hover:shadow-md hover:shadow-[#0057b2]/20 transition-all active:scale-[0.98]"
+                >
+                  Send Message
+                  <Send className="w-4 h-4" />
+                </button>
+                
+                {status && (
+                  <p className={`mt-3 text-sm font-semibold ${status.includes("successfully") ? "text-[#7ed957]" : "text-[#0057b2]"}`}>
+                    {status}
+                  </p>
+                )}
+              </div>
 
             </form>
           </div>

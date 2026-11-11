@@ -133,14 +133,8 @@ export default function Organising() {
         { name: "Swapna Mansani", affiliation: "NIT Silchar", image: "/swapna.png" },
       ] 
     },
-    {
-      role: "Student Activity Chairs",
-      members: [] 
-    },
-    {
-      role: "Hospitality Chairs",
-      members: [] 
-    }
+    
+    
   ];
 
   return (

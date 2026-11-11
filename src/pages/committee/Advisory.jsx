@@ -23,9 +23,7 @@ export default function Advisory() {
             Advisory Committee
           </h1>
           <div className="w-24 h-1.5 bg-[#7ed957] mx-auto rounded-full mb-6"></div>
-          <p className="text-slate-600 text-lg font-medium max-w-2xl mx-auto leading-relaxed">
-            Distinguished experts providing strategic guidance and a global perspective.
-          </p>
+          
         </div>
 
         {/* Unified Advisory Grid */}
