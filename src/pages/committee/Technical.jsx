@@ -4,23 +4,24 @@ import { User } from 'lucide-react';
 export default function Technical() {
   // Only the green highlighted members are included, alphabetized.
   const tpcMembers = [
-    { name: "Amitava Halder", affiliation: "SurTech, JIS Group", image: "" },
+    { name: "Amitava Halder", affiliation: "SurTech, JIS Group", image: "/Amitava Halder.jfif.jpeg" },
     { name: "Amitkumar V. Jha", affiliation: "KIIT University, Bhubaneswar", image: "/amitkumar.webp" },
     { name: "Anagha Bhattacharya", affiliation: "NIT Mizoram", image: "/anagha.jpeg" },
     { name: "Anirudh Nath", affiliation: "IIEST Shibpur", image: "/anirudh.jpeg" },
-    { name: "Chandan Kumar", affiliation: "STCT, Pune", image: "" },
+    { name: "Chandan Kumar", affiliation: "STCT, Pune", image: "/ChandanPic.jpg(1).jpeg" },
     { name: "Debbrota Paul Chowdhury", affiliation: "NIT Silchar", image: "/debbrota.jpg.jpeg" },
     { name: "Korra Balu", affiliation: "NIT Calicut", image: "/korra.png" },
-    { name: "Manika Saha", affiliation: "NIT Durgapur", image: "" },
+    { name: "Manika Saha", affiliation: "NIT Durgapur", image: "/manika.jpg.jpeg" },
     { name: "Mayank Kumar", affiliation: "DTU, Delhi", image: "/mayank.jpg.jpeg" },
     { name: "Nasirul Haque", affiliation: "NIT Calicut", image: "/nasirul.png" },
-    { name: "R. Murugan", affiliation: "NIT Puducherry", image: "" },
-    { name: "Saibal Ghosh", affiliation: "ISI Kolkata", image: "" },
-    { name: "Sanjib Ganguly", affiliation: "IIT Guwahati", image: "" },
-    { name: "Sayanjit Singha Roy", affiliation: "IIT Kanpur", image: "" },
-    { name: "Sayanti Chaudhuri", affiliation: "Adamas University, Kolkata", image: "" },
-    { name: "Soumya Chatterjee", affiliation: "NIT Durgapur", image: "" },
+    { name: "R. Murugan", affiliation: "NIT Puducherry", image: "/R murugan.jfif.jpeg" },
+    { name: "Saibal Ghosh", affiliation: "ISI Kolkata", image: "/saibal ghosh.jfif.jpeg" },
+    { name: "Sanjib Ganguly", affiliation: "IIT Guwahati", image: "/sanjib.JPG" },
+    { name: "Sayanjit Singha Roy", affiliation: "IIT Kanpur", image: "/sayanjit sinha roy.jfif.jpeg" },
+    { name: "Sayanti Chaudhuri", affiliation: "Adamas University, Kolkata", image: "/sayanti choudhary.jfif.jpeg" },
+    { name: "Soumya Chatterjee", affiliation: "NIT Durgapur", image: "/soumya chatterjee.jpg.jpeg" },
     { name: "Sourav Das", affiliation: "IEM Kolkata", image: "/sourab das.jpg.jpeg" },
+    { name: "Subhash Mondal", affiliation: "Dayananda Sagar University, Bengaluru", image: "/subhash.jpeg" },
     { name: "Sudipta Chakraborty", affiliation: "NIT Silchar", image: "/sudipta.jfif.jpeg" },
     { name: "Sumit K Chattopadhyay", affiliation: "IIT Delhi", image: "/sumit_k.jpg.jpeg" },
     { name: "Supratim Gupta", affiliation: "NIT Rourkela", image: "/supratim.jpg.jpeg" },
@@ -37,16 +38,16 @@ export default function Technical() {
             Technical Program Committee
           </h1>
           <div className="w-24 h-1.5 bg-[#7ed957] mx-auto rounded-full mb-6"></div>
-          
         </div>
 
         {/* Dynamic List Rendering */}
         {tpcMembers.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          /* FLEXBOX LAYOUT for centered wrapping (Pyramid style) */
+          <div className="flex flex-wrap justify-center gap-8">
             {tpcMembers.map((member, idx) => (
               <div 
                 key={idx} 
-                className="bg-white border-t-4 border-[#0057b2] hover:border-[#7ed957] p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col items-center text-center h-full"
+                className="bg-white border-t-4 border-[#0057b2] hover:border-[#7ed957] p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col items-center text-center w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[360px]"
               >
                 
                 {/* Profile Image Container */}
@@ -71,12 +72,14 @@ export default function Technical() {
                 </div>
 
                 {/* Member Details */}
-                <h3 className="font-serif font-bold text-lg text-slate-900 group-hover:text-[#0057b2] transition-colors leading-snug mb-2">
-                  {member.name}
-                </h3>
-                <p className="text-sm text-slate-600 font-medium flex-grow">
-                  {member.affiliation}
-                </p>
+                <div className="text-center mt-auto px-2">
+                  <h3 className="font-serif font-bold text-lg text-slate-900 group-hover:text-[#0057b2] transition-colors leading-snug mb-2">
+                    {member.name}
+                  </h3>
+                  <p className="text-sm text-slate-600 font-medium leading-relaxed">
+                    {member.affiliation}
+                  </p>
+                </div>
                 
               </div>
             ))}

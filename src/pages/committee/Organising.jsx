@@ -133,6 +133,23 @@ export default function Organising() {
         { name: "Swapna Mansani", affiliation: "NIT Silchar", image: "/swapna.png" },
       ] 
     },
+    {
+      role: "Student Members",
+      members: [
+        { name: "Deeptangshu Das", image: "" },
+        { name: "Gauriz Bidit Buragohain", image: "" },
+                { name: "Joya Borah", image: "" },
+
+        { name: "Ravi Rakshit", image: "/ravi.jpeg" },
+        { name: "Sandeep Banik", image: "/sandeep.jpeg" },
+        { name: "Shayan Roy", image: "/shayan.jpeg" },
+        { name: "Sounish Maiti", image: "/sounish.jpeg" },
+        { name: "Tushar Pritom Baruah", image: "/tushar.jpeg" },
+
+
+
+      ] 
+    },
     
     
   ];
