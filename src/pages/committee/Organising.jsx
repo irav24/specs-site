@@ -136,9 +136,9 @@ export default function Organising() {
     {
       role: "Student Members",
       members: [
-        { name: "Deeptangshu Das", image: "" },
-        { name: "Gauriz Bidit Buragohain", image: "" },
-                { name: "Joya Borah", image: "" },
+        { name: "Deeptangshu Das", image: "/deep.jpeg" },
+        { name: "Gauriz Bidit Buragohain", image: "/gauriz.jpeg" },
+                { name: "Joya Borah", image: "/joya.jpeg" },
 
         { name: "Ravi Rakshit", image: "/ravi.jpeg" },
         { name: "Sandeep Banik", image: "/sandeep.jpeg" },
