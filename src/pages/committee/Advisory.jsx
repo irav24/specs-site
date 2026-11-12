@@ -9,7 +9,7 @@ export default function Advisory() {
     { name: "Amitava Chatterjee", affiliation: "Jadavpur University", image: "/amitavac.jpg" },
         { name: "Anirban Mukherjee", affiliation: "IIT Kharagpur", image: "/anirban.jpeg" },
 
-    { name: "Arindam Basu, FIEEE", affiliation: "City University of Hong Kong, Hong Kong", image: "/arindam.jpeg" },
+    { name: "Arindam Basu", affiliation: "City University of Hong Kong, Hong Kong", image: "/arindam.jpeg" },
         { name: "Asheesh Kumar Singh", affiliation: "MNNIT Allahabad, Prayagraj", image: "/ashishk.jpg" },
             { name: "Izaskun Garrido", affiliation: "Automatic Control Group, University of the Basque Country, Spain", image: "/izaskun.png" },
                 { name: "Karabi Biswas", affiliation: "IIT Kharagpur", image: "/karabi.jpeg" },
