@@ -2,6 +2,10 @@ import { useState, useEffect } from 'react';
 import { Download, ExternalLink, CalendarDays, MapPin, Building, Globe } from 'lucide-react';
 import ExploreCarousel from '../components/ExploreCarousel';
 
+// 1. IMPORT THE PDF FILE DIRECTLY
+// Make sure to adjust this path depending on where you put the PDF inside your 'src' folder
+import callForPapersPdf from '../assets/flyer.pdf'; 
+
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState({ days: '00', hours: '00', minutes: '00', seconds: '00' });
 
@@ -70,9 +74,10 @@ export default function Home() {
           {/* High Contrast Actions */}
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             
+            {/* 2. USE THE IMPORTED VARIABLE HERE */}
             <a 
-              href="/papers.pdf" 
-              download="IEEE SPeCS_2027_Flyer.pdf"
+              href={callForPapersPdf} 
+              download="SPeCS_2027_Call_for_Papers.pdf"
               className="flex items-center justify-center px-8 py-4 bg-transparent text-white border-2 border-white/30 text-sm font-bold uppercase tracking-widest hover:border-white hover:bg-white/10 transition-colors rounded-lg backdrop-blur-sm"
             >
               Call for papers
