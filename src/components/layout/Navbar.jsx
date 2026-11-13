@@ -135,9 +135,10 @@ export default function Navbar() {
 
           {/* Center: Title */}
           <div className="w-full lg:w-2/4 flex flex-col items-center justify-center text-center">
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-slate-900 tracking-tight mb-0.5 md:mb-1">
-              IEEE SPeCS 2027
-            </h1>
+            <h1 className="font-arial text-2xl sm:text-3xl md:text-3xl lg:text-5xl font-bold text-slate-900 tracking-tight mb-2">
+  IEEE SPeCS 2027
+</h1>
+
           </div>
 
           {/* Right Side: NITS & IEEE Logos (Hidden on small screens to save space) */}
