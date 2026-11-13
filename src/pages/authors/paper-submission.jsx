@@ -32,7 +32,8 @@ export default function PaperSubmission() {
             </h2>
             
             <p className="text-slate-600 font-medium mb-10 max-w-2xl mx-auto leading-relaxed">
-              All paper submissions for IEEE SPeCS 2027 must be submitted electronically via the Microsoft CMT platform. Please ensure your manuscript strictly follows the IEEE template guidelines before uploading your document.
+                              The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+
             </p>
 
             <a 
@@ -50,7 +51,8 @@ export default function PaperSubmission() {
             <div className="flex items-start gap-4 max-w-3xl mx-auto">
               <Info className="w-6 h-6 text-[#0057b2] shrink-0 mt-0.5" />
               <p className="text-slate-600 text-sm font-medium leading-relaxed italic">
-                The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+                              All paper submissions for IEEE SPeCS 2027 must be submitted electronically via the Microsoft CMT platform. Please ensure your manuscript strictly follows the IEEE template guidelines before uploading your document.
+
               </p>
             </div>
           </div>

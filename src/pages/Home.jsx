@@ -178,7 +178,7 @@ export default function Home() {
             <div className="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm border-t-4 border-t-[#0057b2] hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-3 text-lg md:text-xl">Paper Submission</h4>
               <p className="text-slate-600 leading-relaxed text-sm md:text-base">
-                The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support              
+                The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.              
               </p>
             </div>
             
