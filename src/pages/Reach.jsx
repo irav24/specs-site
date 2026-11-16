@@ -80,7 +80,7 @@ export default function Reach() {
                 Cachar, Assam, India - 788010
               </p>
               <div className="w-12 h-1 bg-[#7ed957] my-6 rounded-full"></div>
-             
+             -
             </div>
           </div>
 
